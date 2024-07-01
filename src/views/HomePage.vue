@@ -46,6 +46,22 @@
 			</div>
 		</div>
 	</section>
+	<section class="involve">
+		<div class="involve__wrapper">
+			<div class="span__div">
+				<span class="services__span">Get Involved</span>
+			</div>
+			<h1 class="involve__head">Lets Make A Difference Today</h1>
+			<div class="involve__grid">
+				<div class="diff" v-for="involve in differenceStore.diffs">
+					<InvolveItem 
+					:title="involve.title"
+					:desc="involve.smallDesc"
+					/>
+				</div>
+			</div>
+		</div>
+	</section>
 	<section class="services">
 		<div class="services__wrapper">
 			<div class="span__div">
@@ -61,10 +77,7 @@
 					<div class="service__info">
 						<h3 class="info__head">Service</h3>
 						<div class="link__box">
-							<a href="#" class="info__link"
-								><span class="link__text">Explore</span>
-								<ExpArrow
-							/></a>
+							<a href="#" class="info__link">Explore </a>
 						</div>
 					</div>
 				</div>
@@ -76,10 +89,7 @@
 					<div class="service__info">
 						<h3 class="info__head">Service</h3>
 						<div class="link__box">
-							<a href="#" class="info__link"
-								><span class="link__text">Explore</span>
-								<ExpArrow
-							/></a>
+							<a href="#" class="info__link">Explore </a>
 						</div>
 					</div>
 				</div>
@@ -91,10 +101,7 @@
 					<div class="service__info">
 						<h3 class="info__head">Service</h3>
 						<div class="link__box">
-							<a href="#" class="info__link"
-								><span class="link__text">Explore</span>
-								<ExpArrow
-							/></a>
+							<a href="#" class="info__link">Explore </a>
 						</div>
 					</div>
 				</div>
@@ -162,6 +169,10 @@
 	import Calender from "@/assets/icons/Calender.vue";
 	import Arrow from "@/assets/icons/Arrow.vue";
 	import ExpArrow from "@/assets/icons/ExpArrow.vue";
+
+	import { useDifferenceStore } from "@/stores/differences";
+
+	const differenceStore = useDifferenceStore();
 </script>
 
 <style scoped>
@@ -196,6 +207,9 @@
 		font-family: "Playfair Display", serif;
 	}
 
+	.hero__head-span {
+	}
+
 	.hero__desc {
 		padding: 1.5em 0;
 	}
@@ -208,14 +222,14 @@
 		display: flex;
 		align-items: center;
 		gap: 1em;
-		color: #fff;
+		color: var(--colorWhite);
 		background-color: var(--color02);
 		padding: 0.7em 1.4em;
 		transition: all 0.2s ease;
 	}
 
 	.hero__cta:hover {
-		background-color: var(--color03);
+		background-color: var(--color02Darker);
 	}
 
 	/* ABOUT SECTION */
@@ -234,7 +248,7 @@
 	.about__span,
 	.services__span,
 	.events__span {
-		background-color: #8ab9b2;
+		background-color: var(--colorSpanBg);
 		text-transform: uppercase;
 		padding: 0.5em;
 		border-radius: 25px;
@@ -244,7 +258,7 @@
 	.services__head,
 	.events__head,
 	.info__head {
-		color: var(--titleColor);
+		color: var(--color02Darker);
 	}
 
 	.text-side__desc {
@@ -254,7 +268,7 @@
 	/* SERVICES SECTION */
 
 	.services {
-		background-color: rgb(236, 236, 236);
+		background-color: var(--almostGrey);
 	}
 
 	.services__wrapper {
@@ -273,7 +287,7 @@
 	}
 
 	.service {
-		background-color: #fff;
+		background-color: var(--colorWhite);
 	}
 
 	.service__info {
@@ -292,9 +306,9 @@
 	}
 
 	.info__link {
-		display: flex;
+		/* display: flex;
 		align-items: center;
-		gap: 0.5em;
+		gap: 0.5em; */
 		color: var(--color02);
 		transition: all 0.2s ease;
 		position: relative;
@@ -309,7 +323,7 @@
 		height: 2px;
 		background: currentColor;
 
-		transform: scaleX(0.3);
+		transform: scaleX(0.4);
 		transform-origin: left;
 		transition: transform 0.2s ease-in;
 	}
@@ -397,14 +411,14 @@
 	}
 
 	.blogs__link:hover {
-		color: #fff;
+		color: var(--colorWhite);
 	}
 
 	.blogs__link:hover::after {
 		transform: scaleX(1);
 	}
 
-	@media (min-width: 40em) {
+	@media (min-width: 50em) {
 		/* Together styles */
 
 		.hero__wrapper,

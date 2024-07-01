@@ -19,6 +19,6 @@
 	.header__head {
 		font-size: 4rem;
 		font-family: "Playfair Display", serif;
-		color: var(--color03);
+		color: var(--color02Darker);
 	}
 </style>

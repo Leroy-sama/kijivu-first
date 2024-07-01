@@ -24,10 +24,13 @@
 	:root {
 		--color01: #0fc5b0;
 		--color02: #00937e;
-		--color03: #0a4039;
-		--color04: ;
+		--color02Darker: #0a4039;
+		--color04: #011a16;
+		--colorWhite: #ffffff;
+		--almostGrey: rgb(236, 236, 236);
 		--color05: ;
 		--titleColor: #020c1a;
+		--colorSpanBg: #8ab9b2;
 	}
 
 	img {

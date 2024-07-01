@@ -144,7 +144,7 @@
 		padding: 1em 0;
 	}
 
-	@media (min-width: 40em) {
+	@media (min-width: 50em) {
 		.footer__wrapper {
 			max-width: 1200px;
 			margin: 0 auto;

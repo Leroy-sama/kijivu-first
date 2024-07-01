@@ -127,7 +127,7 @@
 		transform: rotate(-45deg) translateY(-10px);
 	}
 
-	@media (min-width: 40em) {
+	@media (min-width: 50em) {
 		.navlinks {
 			position: static;
 			flex-direction: row;
