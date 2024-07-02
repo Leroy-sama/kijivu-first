@@ -53,10 +53,15 @@
 			</div>
 			<h1 class="involve__head">Lets Make A Difference Today</h1>
 			<div class="involve__grid">
-				<div class="diff" v-for="involve in differenceStore.diffs">
-					<InvolveItem 
-					:title="involve.title"
-					:desc="involve.smallDesc"
+				<div
+					class="diff"
+					v-for="diff in differenceStore.diffs"
+					:key="diff.title"
+				>
+					<InvolveItem
+						:icon="diff.icon"
+						:title="diff.title"
+						:desc="diff.smallDesc"
 					/>
 				</div>
 			</div>
@@ -168,7 +173,7 @@
 <script setup>
 	import Calender from "@/assets/icons/Calender.vue";
 	import Arrow from "@/assets/icons/Arrow.vue";
-	import ExpArrow from "@/assets/icons/ExpArrow.vue";
+	import InvolveItem from "@/components/items/InvolveItem.vue";
 
 	import { useDifferenceStore } from "@/stores/differences";
 
@@ -202,12 +207,10 @@
 	.hero__head,
 	.text-side__head,
 	.services__head,
-	.events__head {
+	.events__head,
+	.involve__head {
 		font-size: 2.5rem;
 		font-family: "Playfair Display", serif;
-	}
-
-	.hero__head-span {
 	}
 
 	.hero__desc {
@@ -257,13 +260,39 @@
 	.text-side__head,
 	.services__head,
 	.events__head,
-	.info__head {
+	.info__head,
+	.involve__head {
 		color: var(--color02Darker);
 	}
 
 	.text-side__desc {
 		padding: 1em 0 2em;
 	}
+
+	/* INVOLVE SECTION */
+
+	/* start */
+
+	.involve__wrapper {
+		margin: 0 1.5em;
+	}
+
+	.involve__head {
+		text-align: center;
+	}
+
+	.involve__grid {
+		display: grid;
+		gap: 2em;
+		padding: 2em 0;
+	}
+
+	.diff {
+		border: 1px solid var(--color02);
+		padding: 1.5em;
+	}
+
+	/* end */
 
 	/* SERVICES SECTION */
 
@@ -424,7 +453,8 @@
 		.hero__wrapper,
 		.about__wrapper,
 		.services__wrapper,
-		.events__wrapper {
+		.events__wrapper,
+		.involve__wrapper {
 			max-width: 1200px;
 			margin: 0 auto;
 		}
@@ -432,7 +462,8 @@
 		.hero__head,
 		.text-side__head,
 		.services__head,
-		.events__head {
+		.events__head,
+		.involve__head {
 			font-size: 3.5rem;
 		}
 
@@ -449,6 +480,18 @@
 			grid-template-columns: 1fr 1fr;
 			gap: 2em;
 		}
+
+		/* INVOLVE SECTION */
+
+		/* start */
+
+		.involve__grid {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			gap: 2em;
+		}
+
+		/* end */
 
 		/* SERVICES SECTION */
 
