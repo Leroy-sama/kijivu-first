@@ -1,56 +1,62 @@
 import { defineStore } from "pinia";
 
-export const useTeamStore = defineStore("teamStore", () => {
+export const useTeamStore = defineStore("teamStore", {
 	state: () => ({
 		team: [
 			{
-				memberName: "Graysen Kilonzo",
-				memberTitle: "Founder",
-				memberWords:
-					"lorem Ips incorrectly Lorem ipsum dolor sit amet consectetur adipisicing elit. Exet voluptatibus excepturi consequuntur quisquam ipsam, maiores enim mollitia. Doloremque, autem expedita. Error	quas debitis a, nam mollitia vel odit saepe! Lorem ipsum dolor sit, amet nsectetur adipisicing elit. Fugit impedit sunt, molestiae consequuntur eligendi enim inventore assumenda natus iste, ipsa perferendis ad tempora veritatis id laboriosam, optio ratione blanditiis!",
-				memberImage:
-					"https://i.pinimg.com/564x/43/22/5b/43225b48e5048398916d281f96fb16e0.jpg",
-			}, 
-			{
-				memberName: "Emma Watson",
-				memberTitle: "Founder",
-				memberWords:
-					"lorem Ips incorrectly Lorem ipsum dolor sit amet consectetur adipisicing elit. Exet voluptatibus excepturi consequuntur quisquam ipsam, maiores enim mollitia. Doloremque, autem expedita. Error	quas debitis a, nam mollitia vel odit saepe! Lorem ipsum dolor sit, amet nsectetur adipisicing elit. Fugit impedit sunt, molestiae consequuntur eligendi enim inventore assumenda natus iste, ipsa perferendis ad tempora veritatis id laboriosam, optio ratione blanditiis!",
-				memberImage:
-					"https://i.pinimg.com/564x/ba/5f/8a/ba5f8a3eeb37935c7b74300afcb15317.jpg",
-			},
-			{
-				memberName: "John Krasinski",
-				memberTitle: "Founder",
-				memberWords:
-					"lorem Ips incorrectly Lorem ipsum dolor sit amet consectetur adipisicing elit. Exet voluptatibus excepturi consequuntur quisquam ipsam, maiores enim mollitia. Doloremque, autem expedita. Error	quas debitis a, nam mollitia vel odit saepe! Lorem ipsum dolor sit, amet nsectetur adipisicing elit. Fugit impedit sunt, molestiae consequuntur eligendi enim inventore assumenda natus iste, ipsa perferendis ad tempora veritatis id laboriosam, optio ratione blanditiis!",
-				memberImage:
-					"https://i.pinimg.com/564x/a4/f4/79/a4f4793ca387e7fe2b74cec830a84499.jpg",
-			},
-			{
-				memberName: "Robert De Niro",
-				memberTitle: "Founder",
-				memberWords:
-					"lorem Ips incorrectly Lorem ipsum dolor sit amet consectetur adipisicing elit. Exet voluptatibus excepturi consequuntur quisquam ipsam, maiores enim mollitia. Doloremque, autem expedita. Error	quas debitis a, nam mollitia vel odit saepe! Lorem ipsum dolor sit, amet nsectetur adipisicing elit. Fugit impedit sunt, molestiae consequuntur eligendi enim inventore assumenda natus iste, ipsa perferendis ad tempora veritatis id laboriosam, optio ratione blanditiis!",
-				memberImage:
-					"https://i.pinimg.com/564x/49/30/4f/49304f3d42613910aea1a5685346c6ad.jpg",
-			},
-			{
-				memberName: "Quentin Tarantino",
-				memberTitle: "Founder",
-				memberWords:
-					"lorem Ips incorrectly Lorem ipsum dolor sit amet consectetur adipisicing elit. Exet voluptatibus excepturi consequuntur quisquam ipsam, maiores enim mollitia. Doloremque, autem expedita. Error	quas debitis a, nam mollitia vel odit saepe! Lorem ipsum dolor sit, amet nsectetur adipisicing elit. Fugit impedit sunt, molestiae consequuntur eligendi enim inventore assumenda natus iste, ipsa perferendis ad tempora veritatis id laboriosam, optio ratione blanditiis!",
-				memberImage:
-					"https://i.pinimg.com/564x/3c/6c/08/3c6c084109443bb2a48b8a56f51dbdb9.jpg",
-			},
-			{
+				memberID: "mb1",
 				memberName: "Martin Scorsese",
 				memberTitle: "Founder",
 				memberWords:
 					"lorem Ips incorrectly Lorem ipsum dolor sit amet consectetur adipisicing elit. Exet voluptatibus excepturi consequuntur quisquam ipsam, maiores enim mollitia. Doloremque, autem expedita. Error	quas debitis a, nam mollitia vel odit saepe! Lorem ipsum dolor sit, amet nsectetur adipisicing elit. Fugit impedit sunt, molestiae consequuntur eligendi enim inventore assumenda natus iste, ipsa perferendis ad tempora veritatis id laboriosam, optio ratione blanditiis!",
 				memberImage:
-					"https://i.pinimg.com/564x/12/db/1b/12db1b6dec6e259a6ffa2f224ea0549e.jpg",
+					"https://i.pinimg.com/564x/96/ea/ed/96eaedaf1f9142e9556a47e1a2635a56.jpg",
+			},
+			{
+				memberID: "mb2",
+				memberName: "Quentin Tarantino",
+				memberTitle: "Founder",
+				memberWords:
+					"lorem Ips incorrectly Lorem ipsum dolor sit amet consectetur adipisicing elit. Exet voluptatibus excepturi consequuntur quisquam ipsam, maiores enim mollitia. Doloremque, autem expedita. Error	quas debitis a, nam mollitia vel odit saepe! Lorem ipsum dolor sit, amet nsectetur adipisicing elit. Fugit impedit sunt, molestiae consequuntur eligendi enim inventore assumenda natus iste, ipsa perferendis ad tempora veritatis id laboriosam, optio ratione blanditiis!",
+				memberImage:
+					"https://i.pinimg.com/564x/d6/cc/ce/d6ccce8bd78df0f40f25153d4053f9f8.jpg",
+			},
+			{
+				memberID: "mb3",
+				memberName: "Christopher Nolan",
+				memberTitle: "Founder",
+				memberWords:
+					"lorem Ips incorrectly Lorem ipsum dolor sit amet consectetur adipisicing elit. Exet voluptatibus excepturi consequuntur quisquam ipsam, maiores enim mollitia. Doloremque, autem expedita. Error	quas debitis a, nam mollitia vel odit saepe! Lorem ipsum dolor sit, amet nsectetur adipisicing elit. Fugit impedit sunt, molestiae consequuntur eligendi enim inventore assumenda natus iste, ipsa perferendis ad tempora veritatis id laboriosam, optio ratione blanditiis!",
+				memberImage:
+					"https://i.pinimg.com/564x/51/24/83/512483532a37c81507a9f911ca5c0661.jpg",
+			},
+			{
+				memberID: "mb4",
+				memberName: "Steven Spielberg",
+				memberTitle: "Founder",
+				memberWords:
+					"lorem Ips incorrectly Lorem ipsum dolor sit amet consectetur adipisicing elit. Exet voluptatibus excepturi consequuntur quisquam ipsam, maiores enim mollitia. Doloremque, autem expedita. Error	quas debitis a, nam mollitia vel odit saepe! Lorem ipsum dolor sit, amet nsectetur adipisicing elit. Fugit impedit sunt, molestiae consequuntur eligendi enim inventore assumenda natus iste, ipsa perferendis ad tempora veritatis id laboriosam, optio ratione blanditiis!",
+				memberImage:
+					"https://i.pinimg.com/564x/68/5d/cf/685dcfdcabcb8e3d6aec9a51c3c989df.jpg",
+			},
+			{
+				memberID: "mb5",
+				memberName: "Sam Raimi",
+				memberTitle: "Founder",
+				memberWords:
+					"lorem Ips incorrectly Lorem ipsum dolor sit amet consectetur adipisicing elit. Exet voluptatibus excepturi consequuntur quisquam ipsam, maiores enim mollitia. Doloremque, autem expedita. Error	quas debitis a, nam mollitia vel odit saepe! Lorem ipsum dolor sit, amet nsectetur adipisicing elit. Fugit impedit sunt, molestiae consequuntur eligendi enim inventore assumenda natus iste, ipsa perferendis ad tempora veritatis id laboriosam, optio ratione blanditiis!",
+				memberImage:
+					"https://i.pinimg.com/564x/89/75/b0/8975b0bd146d5256300a80801cc21a6c.jpg",
+			},
+			{
+				memberID: "mb6",
+				memberName: "Clint EastWood",
+				memberTitle: "Founder",
+				memberWords:
+					"lorem Ips incorrectly Lorem ipsum dolor sit amet consectetur adipisicing elit. Exet voluptatibus excepturi consequuntur quisquam ipsam, maiores enim mollitia. Doloremque, autem expedita. Error	quas debitis a, nam mollitia vel odit saepe! Lorem ipsum dolor sit, amet nsectetur adipisicing elit. Fugit impedit sunt, molestiae consequuntur eligendi enim inventore assumenda natus iste, ipsa perferendis ad tempora veritatis id laboriosam, optio ratione blanditiis!",
+				memberImage:
+					"https://i.pinimg.com/564x/69/82/c5/6982c53cf4e9e7b7016c5f212433cf40.jpg",
 			},
 		],
-	});
+	}),
 });
