@@ -10,7 +10,7 @@ export const useTeamStore = defineStore("teamStore", () => {
 					"lorem Ips incorrectly Lorem ipsum dolor sit amet consectetur adipisicing elit. Exet voluptatibus excepturi consequuntur quisquam ipsam, maiores enim mollitia. Doloremque, autem expedita. Error	quas debitis a, nam mollitia vel odit saepe! Lorem ipsum dolor sit, amet nsectetur adipisicing elit. Fugit impedit sunt, molestiae consequuntur eligendi enim inventore assumenda natus iste, ipsa perferendis ad tempora veritatis id laboriosam, optio ratione blanditiis!",
 				memberImage:
 					"https://i.pinimg.com/564x/43/22/5b/43225b48e5048398916d281f96fb16e0.jpg",
-			},
+			}, 
 			{
 				memberName: "Emma Watson",
 				memberTitle: "Founder",

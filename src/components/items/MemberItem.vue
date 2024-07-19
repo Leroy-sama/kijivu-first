@@ -1,6 +1,6 @@
 <template>
 	<div class="member">
-		<img :src="image" :alt="memberName" />
+		<img :src="memberImage" :alt="memberName" />
 		<div class="member__deets">
 			<p class="member__name">{{ memberName }}</p>
 			<span class="member__title">{{ memberTitle }}</span>
@@ -10,5 +10,5 @@
 </template>
 
 <script setup>
-	const props = defineProps(["image", "memberName", "memberTitle"]);
+	const props = defineProps(["memberImage", "memberName", "memberTitle"]);
 </script>

@@ -54,24 +54,17 @@
 			<div class="team__wrapper">
 				<h1 class="team__head">Meet The Team</h1>
 				<swiper-container
-					:slides-per-view="1"
-					:space-between="spaceBetween"
-					:centered-slides="true"
-					:pagination="{
-						hideOnClick: true,
-					}"
-					:breakpoints="{
-						768: {
-							slidesPerView: 3,
-						},
-					}"
+					slides-per-view="3"
+					speed="500"
+					loop="true"
+					css-mode="true"
 				>
 					<swiper-slide
 						v-for="member in teamStore.team"
 						:key="member.memberName"
 					>
 						<MemberItem
-							:image="member.memberImage"
+							:memberImage="member.memberImage"
 							:memberName="member.memberName"
 							:memberTitle="member.memberTitle"
 						/>
@@ -85,10 +78,11 @@
 <script setup>
 	import MemberItem from "@/components/items/MemberItem.vue";
 
+	import { useTeamStore } from "@/stores/team.js";
+
 	import { register } from "swiper/element/bundle";
 
 	register();
-	import { useTeamStore } from "@/stores/team.js";
 
 	const teamStore = useTeamStore();
 
