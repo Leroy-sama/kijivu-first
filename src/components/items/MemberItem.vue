@@ -4,13 +4,26 @@
 		<div class="member__deets">
 			<p class="member__name">{{ memberName }}</p>
 			<span class="member__title">{{ memberTitle }}</span>
-			<a class="member__view" href="">View</a>
+			<RouterLink class="member__view" :to="memberDetailsLink"
+				>View</RouterLink
+			>
 		</div>
 	</div>
 </template>
 
 <script setup>
-	const props = defineProps(["memberImage", "memberName", "memberTitle"]);
+	import { computed } from "vue";
+
+	const props = defineProps([
+		"id",
+		"memberImage",
+		"memberName",
+		"memberTitle",
+	]);
+
+	const memberDetailsLink = computed(() => {
+		return "/members/" + props.id;
+	});
 </script>
 
 <style lang="css" scoped>
