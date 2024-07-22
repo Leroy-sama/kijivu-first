@@ -88,10 +88,10 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		background: url(https://i.pinimg.com/564x/a8/c6/76/a8c6765bee466731268ecd94d7773fb8.jpg);
+		background: url(../assets/img/about__page.jpg);
 		background-repeat: no-repeat;
 		background-size: cover;
-		background-position: center;
+		background-position: bottom;
 	}
 
 	.header__head {

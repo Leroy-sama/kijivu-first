@@ -74,42 +74,12 @@
 			</div>
 			<h1 class="services__head">What do we do?</h1>
 			<div class="services__grid">
-				<div class="service">
-					<img
-						src="https://i.pinimg.com/564x/d9/9b/43/d99b432f7e40967afe7414077ca9a057.jpg"
-						alt=""
-					/>
-					<div class="service__info">
-						<h3 class="info__head">Service</h3>
-						<div class="link__box">
-							<a href="#" class="info__link">Explore </a>
-						</div>
-					</div>
-				</div>
-				<div class="service">
-					<img
-						src="https://i.pinimg.com/564x/52/d7/cc/52d7ccbfe49717f17a054397a8292d7c.jpg"
-						alt=""
-					/>
-					<div class="service__info">
-						<h3 class="info__head">Service</h3>
-						<div class="link__box">
-							<a href="#" class="info__link">Explore </a>
-						</div>
-					</div>
-				</div>
-				<div class="service">
-					<img
-						src="https://i.pinimg.com/564x/b7/e9/4f/b7e94fd8505e73d0c6bfc4a6d9596365.jpg"
-						alt=""
-					/>
-					<div class="service__info">
-						<h3 class="info__head">Service</h3>
-						<div class="link__box">
-							<a href="#" class="info__link">Explore </a>
-						</div>
-					</div>
-				</div>
+				<ServiceItem
+					v-for="service in servicesStore.services"
+					:key="service.id"
+					:image="service.image"
+					:title="service.title"
+				/>
 			</div>
 			<div class="services__cta">
 				<a href="#" class="blogs__link">Explore More</a>
@@ -174,10 +144,13 @@
 	import Calender from "@/assets/icons/Calender.vue";
 	import Arrow from "@/assets/icons/Arrow.vue";
 	import InvolveItem from "@/components/items/InvolveItem.vue";
+	import ServiceItem from "@/components/items/ServiceItem.vue";
 
 	import { useDifferenceStore } from "@/stores/differences";
+	import { useServicesStore } from "@/stores/services";
 
 	const differenceStore = useDifferenceStore();
+	const servicesStore = useServicesStore();
 </script>
 
 <style scoped>
