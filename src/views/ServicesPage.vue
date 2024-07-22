@@ -21,6 +21,7 @@
 					<div class="services__wrapper">
 						<ServiceItem
 							v-for="service in servicesStore.services"
+							:id="service.id"
 							:key="service.id"
 							:image="service.image"
 							:title="service.title"

@@ -8,14 +8,14 @@ export const useServicesStore = defineStore("servicesStore", {
 				image: "https://i.pinimg.com/564x/52/d7/cc/52d7ccbfe49717f17a054397a8292d7c.jpg",
 				title: "Artistic Education",
 				description:
-					"Our team of artists will guide you through the world of art, helping you develop your creativity and understanding of the artistic process.",
+					"Our team of artists will guide you through the world of art, helping you develop your creativity and understanding of the artistic process. Artistic education is a crucial component of holistic development, fostering creativity, critical thinking, and emotional intelligence. Integrating arts into the educational curriculum not only enhances students' academic performance but also equips them with essential life skills. This multifaceted approach to learning encourages self-expression, cultural awareness, and a deeper appreciation for diverse perspectives.",
 			},
 			{
 				id: "service2",
 				image: "https://i.pinimg.com/564x/d9/9b/43/d99b432f7e40967afe7414077ca9a057.jpg",
 				title: "Artistic Support",
 				description:
-					"We will provide you with the tools and resources you need to succeed in your artistic endeavors.",
+					"We will provide you with the tools and resources you need to succeed in your artistic endeavors. Artistic support is essential for nurturing and sustaining creative talents, enabling artists to thrive and contribute meaningfully to society. This support can come in various forms, including financial assistance, mentorship, and access to resources such as studios, materials, and exhibition spaces. Financial support helps alleviate the economic pressures that often burden artists, allowing them to focus on their craft without the constant worry of financial instability. Mentorship programs offer invaluable guidance and feedback, helping emerging artists refine their skills and navigate the complexities",
 			},
 			{
 				id: "service3",

@@ -13,6 +13,7 @@
 
 <script setup>
 	import { computed } from "vue";
+	import { useRoute } from "vue-router";
 
 	const props = defineProps([
 		"id",
@@ -22,7 +23,8 @@
 	]);
 
 	const memberDetailsLink = computed(() => {
-		return "/members/" + props.id;
+		const route = useRoute();
+		return route.path + "/" + props.id;
 	});
 </script>
 

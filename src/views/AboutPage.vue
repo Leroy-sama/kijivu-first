@@ -57,11 +57,9 @@
 				<div class="team__wrapper">
 					<h1 class="team__head">Meet The Team</h1>
 					<div class="members">
-						<div
-							v-for="member in teamStore.team"
-							:key="member.memberID"
-						>
+						<div v-for="member in teamStore.team" :key="member.id">
 							<MemberItem
+								:id="member.id"
 								:memberImage="member.memberImage"
 								:memberName="member.memberName"
 								:memberTitle="member.memberTitle"

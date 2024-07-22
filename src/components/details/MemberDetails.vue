@@ -32,6 +32,7 @@
 	import Twitter from "@/assets/icons/Twitter.vue";
 
 	import { onMounted, ref, computed } from "vue";
+
 	import { useTeamStore } from "@/stores/team";
 	import { useRoute } from "vue-router";
 
