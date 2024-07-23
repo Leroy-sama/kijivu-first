@@ -1,5 +1,5 @@
 <template>
-	<div class="service">
+	<div class="service" v-if="selectedService">
 		<div class="service__wrapper">
 			<div class="service__image">
 				<img :src="image" alt="" />
@@ -10,11 +10,14 @@
 			</div>
 		</div>
 	</div>
+	<div v-else>
+		<p>Not loading for some reason</p>
+	</div>
 </template>
 
 <script setup>
 	import { useServicesStore } from "@/stores/services";
-	import { computed, onMounted, ref } from "vue";
+	import { onMounted, ref, computed } from "vue";
 	import { useRoute } from "vue-router";
 
 	const servicesStore = useServicesStore();

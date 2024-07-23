@@ -22,21 +22,21 @@ export const useServicesStore = defineStore("servicesStore", {
 				image: "https://i.pinimg.com/564x/b7/e9/4f/b7e94fd8505e73d0c6bfc4a6d9596365.jpg",
 				title: "Community Engagement",
 				description:
-					"Join us in our community, sharing your art and learning from others in our artistic journey.",
+					"Community engagement involves the collaboration and active participation of local residents, organizations, and stakeholders in the planning, decision-making, and implementation processes that affect their community. This approach fosters a sense of ownership and empowerment among community members, ensuring that diverse voices and perspectives are heard and valued. Effective community engagement builds trust, strengthens relationships, and enhances the relevance and sustainability of initiatives, leading to more resilient and cohesive communities. Through open dialogue and inclusive practices, community engagement promotes shared responsibility and collective action toward common goals.",
 			},
 			{
 				id: "service4",
 				image: "https://i.pinimg.com/564x/95/92/e2/9592e2612120c4717dc8cf4df67d9cc2.jpg",
 				title: "Artistic Inspiration",
 				description:
-					"Stay inspired by the beauty and creativity of the world around you, and discover new ways to express yourself through art.",
+					"Artistic inspiration is the spark that ignites the creative process, drawing from a multitude of sources such as nature, personal experiences, emotions, cultural heritage, and the works of other artists. It can strike unexpectedly, transforming everyday moments into profound expressions of art. This inspiration fuels the artist's imagination, allowing them to explore new perspectives and push the boundaries of their creativity. Whether through a vivid sunset, a stirring piece of music, or a poignant memory, artistic inspiration connects deeply with the artist's inner world, enabling them to convey their unique vision and connect with audiences on an emotional level.",
 			},
 			{
 				id: "service5",
 				image: "https://i.pinimg.com/564x/08/07/4c/08074cc4352cbf988ce893241ae99d2c.jpg",
 				title: "Advertisement",
 				description:
-					"Help us promote your artwork through various channels, such as social media, print, and online advertising.",
+					"Advertisement is a strategic communication tool used by businesses and organizations to promote products, services, or ideas to a target audience. Through various media channels such as television, radio, print, digital platforms, and social media, advertisements aim to capture attention, generate interest, and influence consumer behavior. Effective advertisements are designed to be compelling and memorable, often incorporating creative visuals, persuasive messages, and emotional appeals to engage the audience. By highlighting the unique value and benefits of what is being advertised, the goal is to drive consumer action, whether it be making a purchase, adopting a new habit, or supporting a cause.",
 			},
 		],
 	}),
