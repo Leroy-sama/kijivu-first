@@ -46,27 +46,6 @@
 			</div>
 		</div>
 	</section>
-	<section class="involve">
-		<div class="involve__wrapper">
-			<div class="span__div">
-				<span class="services__span">Get Involved</span>
-			</div>
-			<h1 class="involve__head">Lets Make A Difference Today</h1>
-			<div class="involve__grid">
-				<div
-					class="diff"
-					v-for="diff in differenceStore.diffs"
-					:key="diff.title"
-				>
-					<InvolveItem
-						:icon="diff.icon"
-						:title="diff.title"
-						:desc="diff.smallDesc"
-					/>
-				</div>
-			</div>
-		</div>
-	</section>
 	<section class="services">
 		<div class="services__wrapper">
 			<div class="span__div">

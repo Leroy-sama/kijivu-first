@@ -1,7 +1,9 @@
 <template>
 	<div class="member" v-if="selectedMember">
 		<header>
-			<h1>Who is {{ memberName }}</h1>
+			<h1>
+				Who is <span class="member__name">{{ memberName }}</span>
+			</h1>
 		</header>
 		<div class="wrapper">
 			<div class="content">
@@ -14,8 +16,8 @@
 					<div class="connect">
 						<p>connect on:</p>
 						<div class="socials">
-							<Instagram />
-							<Twitter />
+							<Instagram class="ig" />
+							<Twitter class="x" />
 						</div>
 					</div>
 				</div>
@@ -66,3 +68,71 @@
 		}
 	});
 </script>
+
+<style scoped>
+	header {
+		background-image: url(@/assets/img/whoIs.jpg);
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		min-height: 50vh;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	header h1 {
+		text-align: center;
+		color: #fff;
+	}
+
+	.member__name {
+		color: var(--color02Darker);
+		display: block;
+		font-family: "Playfair Display", serif;
+		font-size: 2.5rem;
+	}
+
+	.wrapper {
+		margin: 3rem 1.5rem;
+	}
+
+	.content img {
+		inline-size: 100%;
+		aspect-ratio: 1 / 1;
+		object-fit: cover;
+	}
+
+	.text-side {
+		display: grid;
+		gap: 1rem;
+	}
+
+	.text-side h1 {
+		color: var(--color02Darker);
+	}
+
+	.socials .ig {
+		background-color: blueviolet;
+	}
+
+	.socials .x {
+		background-color: rgb(0, 0, 0);
+	}
+
+	@media (min-width: 600px) {
+		.member__name {
+			font-size: 4rem;
+		}
+
+		.wrapper {
+			max-width: 1200px;
+			margin: 3rem auto;
+		}
+
+		.content {
+			display: flex;
+			gap: 2.5rem;
+			align-items: center;
+		}
+	}
+</style>

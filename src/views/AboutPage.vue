@@ -124,8 +124,7 @@
 	/* Team */
 
 	.team__wrapper {
-		max-width: 1200px;
-		margin: 0 auto;
+		margin: 0 1.5rem;
 	}
 
 	.members {
@@ -149,6 +148,11 @@
 		}
 
 		/* Team*/
+
+		.team__wrapper {
+			max-width: 1200px;
+			margin: 0 auto;
+		}
 
 		.members {
 			grid-template-columns: repeat(3, 1fr);
