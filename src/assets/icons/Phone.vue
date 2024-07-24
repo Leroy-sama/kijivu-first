@@ -1,16 +1,27 @@
-<script>
-	export default {
-		name: "GgPhone",
-	};
+<script setup>
+	const props = defineProps({
+		width: {
+			type: String,
+			default: "1em",
+		},
+		height: {
+			type: String,
+			default: "1em",
+		},
+		color: {
+			type: String,
+			default: "#fff",
+		},
+	});
 </script>
 <template>
 	<svg
 		xmlns="http://www.w3.org/2000/svg"
-		width="1em"
-		height="1em"
+		:width="width"
+		:height="height"
 		viewBox="0 0 24 24"
 	>
-		<g fill="#fff">
+		<g :fill="color">
 			<path
 				d="M22 12A10.002 10.002 0 0 0 12 2v2a8.003 8.003 0 0 1 7.391 4.938A8 8 0 0 1 20 12zM2 10V5a1 1 0 0 1 1-1h5a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H6a8 8 0 0 0 8 8v-2a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1h-5C7.373 22 2 16.627 2 10"
 			/>

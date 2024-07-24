@@ -5,7 +5,7 @@
 			<div class="grid">
 				<div class="first">
 					<div class="box">
-						<Location />
+						<SecLoc />
 						<span class="text">
 							Lorem ipsum dolor sit amet consectetur adipisicing
 							elit. Inventore
@@ -63,7 +63,7 @@
 </template>
 
 <script setup>
-	import Location from "@/assets/icons/Location.vue";
+	import SecLoc from "@/assets/icons/SecLoc.vue";
 	import Phone from "@/assets/icons/Phone.vue";
 	import Email from "@/assets/icons/Email.vue";
 	import Twitter from "@/assets/icons/Twitter.vue";

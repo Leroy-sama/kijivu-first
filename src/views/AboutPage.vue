@@ -107,6 +107,10 @@
 		padding: 2em 0;
 	}
 
+	.story__head {
+		color: var(--color02);
+	}
+
 	.story__head,
 	.story__text,
 	.team__head {
@@ -128,7 +132,10 @@
 	}
 
 	.members {
-		display: grid;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
 		gap: 2em;
 	}
 
@@ -155,7 +162,9 @@
 		}
 
 		.members {
-			grid-template-columns: repeat(3, 1fr);
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+			gap: 2rem;
 		}
 	}
 </style>

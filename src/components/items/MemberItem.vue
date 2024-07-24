@@ -30,9 +30,11 @@
 
 <style lang="css" scoped>
 	.member {
-		padding: 2em;
+		padding: 1.5rem;
 		border: 1px solid var(--color02);
 		border-radius: 10px;
+		display: grid;
+		gap: 2rem;
 	}
 
 	.member img {
@@ -46,11 +48,13 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		gap: 0.7rem;
+		gap: 0.8rem;
 	}
 
 	.member__name {
+		font-size: 1.3rem;
 		font-weight: 700;
+		color: var(--color02Darker);
 	}
 
 	.member__title {
@@ -63,5 +67,10 @@
 		padding: 0.5em 1.3em;
 		border-radius: 0.5em;
 		text-decoration: none;
+		transition: all 0.2s ease-in;
+	}
+
+	.member__view:hover {
+		background-color: var(--color02Darker);
 	}
 </style>

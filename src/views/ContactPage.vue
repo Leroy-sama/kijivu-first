@@ -79,17 +79,17 @@
 					</form>
 					<div class="addresses">
 						<div class="address">
-							<SecLoc />
+							<SecLoc color="#00937e" width="48" height="48" />
 							<h3>Our Address</h3>
 							<p>Quality Plaza, Kisumu City</p>
 						</div>
 						<div class="address">
-							<SecEma />
+							<Email color="#00937e" width="48" height="48" />
 							<h3>Email Us</h3>
 							<p>info@kijivuafrika.com</p>
 						</div>
 						<div class="address">
-							<SecPho />
+							<Phone color="#00937e" width="48" height="48" />
 							<h3>Call Us</h3>
 							<p>+254712345678</p>
 						</div>
@@ -102,8 +102,8 @@
 
 <script setup>
 	import SecLoc from "@/assets/icons/SecLoc.vue";
-	import SecEma from "@/assets/icons/SecEma.vue";
-	import SecPho from "@/assets/icons/SecPho.vue";
+	import Email from "@/assets/icons/Email.vue";
+	import Phone from "@/assets/icons/Phone.vue";
 
 	import { reactive, ref } from "vue";
 

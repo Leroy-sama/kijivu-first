@@ -9,9 +9,9 @@
 				uecheiowoi weiu
 			</p>
 			<div class="hero__cta-box">
-				<a href="#" class="hero__cta"
+				<RouterLink to="/about" class="hero__cta"
 					><span>Learn More</span> <Arrow
-				/></a>
+				/></RouterLink>
 			</div>
 		</div>
 	</section>
@@ -40,7 +40,9 @@
 						minima eius provident dolor necessitatibus magni?
 					</p>
 					<div class="hero__cta-box">
-						<a href="#" class="hero__cta">Learn More</a>
+						<RouterLink to="/about" class="hero__cta"
+							>Learn More</RouterLink
+						>
 					</div>
 				</div>
 			</div>
@@ -54,14 +56,16 @@
 			<h1 class="services__head">What do we do?</h1>
 			<div class="services__grid">
 				<ServiceItem
-					v-for="service in servicesStore.services"
+					v-for="service in limitedServices"
 					:key="service.id"
 					:image="service.image"
 					:title="service.title"
 				/>
 			</div>
 			<div class="services__cta">
-				<a href="#" class="blogs__link">Explore More</a>
+				<RouterLink to="/services" class="blogs__link"
+					>Explore More</RouterLink
+				>
 			</div>
 		</div>
 	</section>
@@ -120,16 +124,17 @@
 </template>
 
 <script setup>
+	import { computed } from "vue";
+
 	import Calender from "@/assets/icons/Calender.vue";
 	import Arrow from "@/assets/icons/Arrow.vue";
-	import InvolveItem from "@/components/items/InvolveItem.vue";
 	import ServiceItem from "@/components/items/ServiceItem.vue";
 
-	import { useDifferenceStore } from "@/stores/differences";
 	import { useServicesStore } from "@/stores/services";
 
-	const differenceStore = useDifferenceStore();
 	const servicesStore = useServicesStore();
+
+	const limitedServices = computed(() => servicesStore.services.slice(0, 3));
 </script>
 
 <style scoped>

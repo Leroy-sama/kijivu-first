@@ -1,13 +1,28 @@
 <template>
 	<div class="service" v-if="selectedService">
-		<div class="service__wrapper">
-			<div class="service__image">
+		<div class="wrapper">
+			<RouterLink to="/services" class="first">Back</RouterLink>
+			<div class="service__wrapper">
 				<img :src="image" alt="" />
+
+				<div class="service__content">
+					<h2 class="service__title">{{ title }}</h2>
+					<p class="service__description">{{ description }}</p>
+					<div class="video-container">
+						<iframe
+							src="https://www.youtube.com/embed/VqHhp7ZL3is"
+							title="GASLIGHTER (Kenyan Short Film)"
+							frameborder="0"
+							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+							referrerpolicy="strict-origin-when-cross-origin"
+							allowfullscreen
+						></iframe>
+					</div>
+				</div>
 			</div>
-			<div class="service__content">
-				<h2 class="service__title">{{ title }}</h2>
-				<p class="service__description">{{ description }}</p>
-			</div>
+			<RouterLink class="service-btn" to="/contact"
+				>Contact Us</RouterLink
+			>
 		</div>
 	</div>
 	<div v-else>
@@ -50,3 +65,56 @@
 		}
 	});
 </script>
+
+<style lang="css" scoped>
+	.wrapper {
+		margin: 2rem 1.5rem;
+	}
+
+	.service__wrapper {
+		margin: 2rem 0;
+	}
+
+	.first {
+		padding: 0.4rem 1rem;
+		box-shadow: 0 2px 8px rgba(0 0 0 / 0.3);
+		color: var(--color02);
+	}
+
+	.service__content {
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+	}
+
+	.service__title {
+		color: var(--color02Darker);
+	}
+
+	.service-btn {
+		background-color: var(--color02);
+		color: var(--colorWhite);
+		border: none;
+		padding: 0.75rem 1.5rem;
+		text-decoration: none;
+		cursor: pointer;
+		transition: background-color 0.3s ease;
+	}
+
+	.service-btn:hover {
+		background-color: var(--color02Darker);
+	}
+
+	@media (min-width: 600px) {
+		.wrapper {
+			max-width: 1200px;
+			margin: 3rem auto;
+		}
+
+		.service__wrapper {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			gap: 2rem;
+		}
+	}
+</style>

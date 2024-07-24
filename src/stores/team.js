@@ -51,7 +51,7 @@ export const useTeamStore = defineStore("teamStore", {
 				memberWords:
 					"I am a professional self taught visual artist, with 8 years of experience, who uses different media to come up with hyper-realistic drawings. I specialise in canvas paintings, charcoal realistic drawings, flower vase customization, interior decoration, baking and cake art, and is responsible for educating and training other members in short skills, in areas that he specialises in. Wanga is a powerful force in the group and uses his positive attitude and tireless energy to encourage others to work hard and succeed. Wanga is inspired daily by the beauty of nature and the love of music.",
 				memberImage:
-					"https://i.pinimg.com/564x/89/75/b0/8975b0bd146d5256300a80801cc21a6c.jpg",
+					"https://i.pinimg.com/564x/94/77/33/94773342fd9f228fe039f5035d4346a3.jpg",
 			},
 			{
 				id: "mb6",

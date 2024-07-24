@@ -111,15 +111,20 @@
 		color: var(--color02Darker);
 	}
 
+	.socials {
+		display: flex;
+		gap: 1rem;
+	}
+
 	.socials .ig {
-		background-color: blueviolet;
+		background: linear-gradient(#c837ab, #ff543e);
 	}
 
 	.socials .x {
 		background-color: rgb(0, 0, 0);
 	}
 
-	@media (min-width: 600px) {
+	@media (min-width: 60em) {
 		.member__name {
 			font-size: 4rem;
 		}

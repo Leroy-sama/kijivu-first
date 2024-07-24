@@ -68,6 +68,10 @@
 		padding: 2rem 0;
 	}
 
+	.content__head {
+		color: var(--color02);
+	}
+
 	.content__head,
 	.intro__desc {
 		text-align: center;
