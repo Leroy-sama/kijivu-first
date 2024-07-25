@@ -74,7 +74,7 @@
 
 <style scoped>
 	footer {
-		background-color: #272a2e;
+		background-color: var(--titleColor);
 	}
 
 	.footer__wrapper {

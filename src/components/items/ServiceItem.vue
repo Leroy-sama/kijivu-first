@@ -23,3 +23,28 @@
 		return route.path + "/" + props.id;
 	});
 </script>
+
+<style lang="css" scoped>
+	.service {
+		box-shadow: 0 2px 8px rgb(0 0 0 / 0.4);
+	}
+
+	.service__info {
+		padding: 1.5rem;
+		display: grid;
+		gap: 1rem;
+	}
+
+	.info__link {
+		color: var(--colorWhite);
+		background-color: var(--color02);
+		padding: 0.4em 1em;
+		transition: all 0.2s ease;
+	}
+
+	.service img {
+		inline-size: 100%;
+		aspect-ratio: 4 / 3;
+		object-fit: cover;
+	}
+</style>

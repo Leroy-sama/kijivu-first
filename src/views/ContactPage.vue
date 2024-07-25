@@ -79,17 +79,17 @@
 					</form>
 					<div class="addresses">
 						<div class="address">
-							<SecLoc color="#00937e" width="48" height="48" />
+							<SecLoc color="#f0b503" width="48" height="48" />
 							<h3>Our Address</h3>
 							<p>Quality Plaza, Kisumu City</p>
 						</div>
 						<div class="address">
-							<Email color="#00937e" width="48" height="48" />
+							<Email color="#f0b503" width="48" height="48" />
 							<h3>Email Us</h3>
 							<p>info@kijivuafrika.com</p>
 						</div>
 						<div class="address">
-							<Phone color="#00937e" width="48" height="48" />
+							<Phone color="#f0b503" width="48" height="48" />
 							<h3>Call Us</h3>
 							<p>+254712345678</p>
 						</div>
