@@ -67,6 +67,39 @@
 					</div>
 				</div>
 			</div>
+			<div class="awas">
+				<div class="history">
+					<div class="history__text">
+						<h2 class="text__head">Our History</h2>
+						<p class="text__desc">
+							Founded in 1981 in Lausanne, Switzerland, and
+							quickly expanding to Silicon Valley, Logitech
+							started connecting people through innovative
+							computer peripherals and many industry firsts,
+							including the infrared cordless mouse, the
+							thumb-operated trackball, the laser mouse, and more.
+							We honor bold innovation and our founders, Pierluigi
+							Zappacosta, Giacomo Marini and Daniel Borel,
+							Chairman Emeritus.
+						</p>
+					</div>
+					<img src="../assets/img/our-history.webp" alt="" />
+				</div>
+				<div class="culture">
+					<div class="culture__text">
+						<h2 class="text__head">Our Culture</h2>
+						<p class="text__desc">
+							Everyone at Kijivu works together like a big family,
+							helping each other and sharing ideas. We believe in
+							being responsible, showing compassion, and always
+							staying curious. Just like how we make our fun and
+							meaningful projects, we also make sure to have fun
+							and learn new things every day.
+						</p>
+					</div>
+					<img src="../assets/img/our-culture.webp" alt="" />
+				</div>
+			</div>
 			<div class="team">
 				<div class="team__wrapper">
 					<h1 class="team__head">Meet The Team</h1>
@@ -110,6 +143,7 @@
 		font-size: 4rem;
 		font-family: "Playfair Display", serif;
 		color: var(--color02Darker);
+		text-align: center;
 	}
 
 	/* Story */
@@ -146,11 +180,31 @@
 		padding: 1rem;
 		box-shadow: 0 2px 8px rgb(0 0 0 / 0.3);
 		background-color: var(--colorWhite);
+		transition: all 0.3s ease-in-out;
 	}
 
 	.mis__head,
 	.vis__head {
 		color: var(--color02);
+		transition: all 0.3s ease-in-out;
+		text-align: center;
+	}
+
+	.mis:hover,
+	.vis:hover {
+		background-color: var(--color02);
+		color: var(--colorWhite);
+	}
+
+	.mis:hover .mis__head,
+	.vis:hover .vis__head {
+		color: var(--colorWhite);
+	}
+
+	/* History and Culture */
+
+	.awas {
+		margin: 0 1.5rem;
 	}
 
 	/* Images */
@@ -158,6 +212,9 @@
 	.images__wrapper {
 		display: grid;
 		gap: 2em;
+	}
+
+	.history {
 	}
 
 	/* Team */
@@ -191,6 +248,39 @@
 		.images__wrapper {
 			grid-template-columns: 1fr 1fr;
 			gap: 2em;
+		}
+
+		/* History and Culture */
+
+		.history {
+			display: flex;
+			align-items: center;
+			/* gap: 2rem; */
+		}
+
+		.culture {
+			display: flex;
+			flex-direction: row-reverse;
+			align-items: center;
+			/* gap: 2rem; */
+		}
+
+		.history img,
+		.culture img {
+			max-width: 575px;
+			aspect-ratio: 1 / 1;
+			object-fit: cover;
+		}
+
+		.history__text,
+		.culture__text {
+			padding: 4rem;
+		}
+
+		.text__head {
+			text-transform: uppercase;
+			color: var(--color02);
+			padding: 1rem 0;
 		}
 
 		/* Team*/
