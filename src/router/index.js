@@ -45,6 +45,15 @@ const routes = [
 		},
 	},
 	{
+		path: "/updates",
+		name: "updates",
+		props: true,
+		component: () => import("../views/UpdatesPage.vue"),
+		meta: {
+			title: "Updates",
+		},
+	},
+	{
 		path: "/contact",
 		name: "contact",
 		component: () => import("../views/ContactPage.vue"),

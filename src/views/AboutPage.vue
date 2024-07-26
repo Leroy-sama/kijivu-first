@@ -10,11 +10,10 @@
 				<div class="story__wrapper">
 					<h1 class="story__head">Our Story</h1>
 					<p class="story__text">
-						Lorem ipsum dolor sit, amet consectetur adipisicing
-						elit. Fugit impedit sunt, molestiae consequuntur
-						eligendi enim inventore assumenda natus iste, ipsa
-						perferendis ad rem tempora veritatis id laboriosam,
-						optio ratione blanditiis!
+						We harness the power of storytelling among the youth to
+						spark conversations and inspire action on critical
+						issues like climate change. Join us in creating a
+						brighter future through nurturing impactful narratives
 					</p>
 					<p class="story__text">
 						Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -25,13 +24,28 @@
 					</p>
 				</div>
 			</div>
+			<div class="mis-vis">
+				<div class="mis">
+					<h2 class="mis__head">Our Mision</h2>
+					<p class="mis__text">
+						To empower and engage a million youth to address
+						critical social issues, foster community resilience, and
+						promote creative expression.
+					</p>
+				</div>
+				<div class="vis">
+					<h2 class="vis__head">Our Vision</h2>
+					<p class="vis__text">
+						To stand as a leading community based organization
+						championing understanding and igniting positive societal
+						change art.
+					</p>
+				</div>
+			</div>
 			<div class="images">
 				<div class="images__wrapper">
 					<div class="image">
-						<img
-							src="https://resource.logitech.com/w_660,h_371,c_lfill,q_auto,f_auto,dpr_1.0/content/dam/logitech/about/logi-employees-group-photo.jpg?v=1"
-							alt=""
-						/>
+						<img src="../assets/img/DSC_0837.jpg" alt="" />
 					</div>
 					<div class="image">
 						<img
@@ -86,10 +100,10 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		background: url(../assets/img/about__page.jpg);
+		background: url(../assets/img/boss-s-day-arrangement-with-paper-boats-copy-space.jpg);
 		background-repeat: no-repeat;
 		background-size: cover;
-		background-position: bottom;
+		background-position: top;
 	}
 
 	.header__head {
@@ -116,6 +130,27 @@
 	.team__head {
 		padding: 0.5em 0;
 		text-align: center;
+	}
+
+	/* mis-vis */
+
+	.mis-vis {
+		/* margin: 0 1.5rem; */
+		display: grid;
+		gap: 1rem;
+		background-color: var(--almostGrey);
+	}
+
+	.mis,
+	.vis {
+		padding: 1rem;
+		box-shadow: 0 2px 8px rgb(0 0 0 / 0.3);
+		background-color: var(--colorWhite);
+	}
+
+	.mis__head,
+	.vis__head {
+		color: var(--color02);
 	}
 
 	/* Images */
@@ -145,6 +180,10 @@
 		.wrapper {
 			max-width: 1200px;
 			margin: 3rem auto;
+		}
+
+		.mis-vis {
+			grid-template-columns: 1fr 1fr;
 		}
 
 		/* Images */

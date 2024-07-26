@@ -26,6 +26,13 @@
 				</li>
 				<li>
 					<RouterLink
+						:to="{ name: 'updates' }"
+						@click.native="closeNavMenu"
+						>Updates</RouterLink
+					>
+				</li>
+				<li>
+					<RouterLink
 						:to="{ name: 'contact' }"
 						@click.native="closeNavMenu"
 						>Contact</RouterLink

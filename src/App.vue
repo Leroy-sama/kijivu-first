@@ -24,12 +24,9 @@
 	:root {
 		/* ----- version 01 ----- */
 
-		/* --color01: #0fc5b0; */
-		/* --color02: #00937e; */
-		/* --color02Darker: #0a4039; */
-		--color01: #ffcd38;
-		--color02: #f0b503;
-		--color02Darker: #af8300;
+		--color01: #0fc5b0;
+		--color02: #00937e;
+		--color02Darker: #0a4039;
 		--color04: #011a16;
 		--colorWhite: #ffffff;
 		--almostGrey: rgb(236, 236, 236);

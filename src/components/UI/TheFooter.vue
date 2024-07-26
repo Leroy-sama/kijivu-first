@@ -13,11 +13,11 @@
 					</div>
 					<div class="box">
 						<Phone />
-						<span class="text">+254712345678</span>
+						<span class="text">+254719572537</span>
 					</div>
 					<div class="box">
 						<Email />
-						<span class="text">envkt@example.com</span>
+						<span class="text">Kijivumedia@gmail.com</span>
 					</div>
 				</div>
 				<div class="second">

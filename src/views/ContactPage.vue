@@ -7,7 +7,7 @@
 					<h1 class="text-head">Let us know how we can help you</h1>
 					<p class="text-desc">
 						Contact us today at
-						<span class="email">info@kijivuafrica.com</span> or by
+						<span class="email">Kijivumedia@gmail.com</span> or by
 						using the form below and a member of our team will be in
 						touch.
 					</p>
@@ -79,19 +79,19 @@
 					</form>
 					<div class="addresses">
 						<div class="address">
-							<SecLoc color="#f0b503" width="48" height="48" />
+							<SecLoc color="#00937e" width="48" height="48" />
 							<h3>Our Address</h3>
 							<p>Quality Plaza, Kisumu City</p>
 						</div>
 						<div class="address">
-							<Email color="#f0b503" width="48" height="48" />
+							<Email color="#00937e" width="48" height="48" />
 							<h3>Email Us</h3>
-							<p>info@kijivuafrika.com</p>
+							<p>Kijivumedia@gmail.com</p>
 						</div>
 						<div class="address">
-							<Phone color="#f0b503" width="48" height="48" />
+							<Phone color="#00937e" width="48" height="48" />
 							<h3>Call Us</h3>
-							<p>+254712345678</p>
+							<p>+254719572537</p>
 						</div>
 					</div>
 				</div>

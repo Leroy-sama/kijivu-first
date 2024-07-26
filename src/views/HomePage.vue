@@ -3,10 +3,10 @@
 		<div class="hero__wrapper">
 			<h1 class="hero__head">We are Kijivu Afrika</h1>
 			<p class="hero__desc">
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Non,
-				suscipit necessitatibus ullam nam rerum voluptatibus quas itaque
-				sed, iehoej eue peu alj 9js 9jds dfnalj- jdiq laie pej hbn
-				uecheiowoi weiu
+				KIJIVU is a Kenyan Community Based Organization, on a mission to
+				educate, inspire and engage youth by addressing critical social
+				issues, fostering community empowerment, and promoting creative
+				expression.
 			</p>
 			<div class="hero__cta-box">
 				<RouterLink to="/about" class="hero__cta"
