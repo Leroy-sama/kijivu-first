@@ -1,7 +1,7 @@
 <template>
 	<header>
 		<nav>
-			<h1 class="logo">Kijivu Afrika</h1>
+			<h1 class="logo">Kijivu</h1>
 			<ul class="navlinks" :class="{ active: state.isActive }">
 				<li>
 					<RouterLink
@@ -74,6 +74,11 @@
 		display: flex;
 		justify-content: space-between;
 		padding: 1em;
+	}
+
+	.logo {
+		text-transform: uppercase;
+		color: var(--titleColor);
 	}
 
 	.burger {

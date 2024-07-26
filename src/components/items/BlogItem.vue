@@ -1,21 +1,20 @@
 <template>
 	<div class="blog">
-		<img
-			src="https://i.pinimg.com/564x/57/ae/ef/57aeeffbe549cdeca367fd9ba54ec7e6.jpg"
-			alt=""
-		/>
+		<img :src="image" alt="" />
 		<div class="blog__details">
 			<div class="even">
 				<Calender />
-				<span class="event__date">June 22, 2024</span>
+				<span class="event__date">{{ date }}</span>
 			</div>
-			<h3 class="event__title">Lorem Ipsam</h3>
+			<h3 class="event__title">{{ title }}</h3>
 		</div>
 	</div>
 </template>
 
 <script setup>
 	import Calender from "@/assets/icons/Calender.vue";
+
+	const props = defineProps(["id", "image", "title", "date"]);
 </script>
 
 <style lang="css" scoped>
@@ -25,7 +24,7 @@
 
 	.blog img {
 		inline-size: 100%;
-		aspect-ratio: 4 / 3;
+		aspect-ratio: 16 / 9;
 		object-fit: cover;
 	}
 

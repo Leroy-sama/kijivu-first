@@ -117,7 +117,9 @@
 				</div>
 			</div>
 			<div class="services__cta">
-				<a href="#" class="blogs__link">Our Blogs</a>
+				<RouterLink to="/updates" class="blogs__link"
+					>Our Blogs</RouterLink
+				>
 			</div>
 		</div>
 	</section>
