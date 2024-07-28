@@ -1,10 +1,18 @@
 <template>
 	<header>
-		<h1 class="header__head">The Updates page</h1>
+		<h1 class="header__head">News & Updates</h1>
 	</header>
 	<div class="wrapper">
+		<div class="filter">
+			<select name="filter" id="filter">
+				<option value="">Filter by type</option>
+				<option value="">News</option>
+				<option value="">Events</option>
+				<option value="">Blogs</option>
+			</select>
+		</div>
 		<div class="blogs">
-			<h1 class="blogs__head">Our Updates</h1>
+			<h1 class="blogs__head">Our Events</h1>
 			<div class="blogsss">
 				<BlogItem
 					v-for="update in updatesStore.updates"

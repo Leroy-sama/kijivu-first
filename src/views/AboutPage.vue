@@ -100,6 +100,24 @@
 					<img src="../assets/img/our-culture.webp" alt="" />
 				</div>
 			</div>
+			<div class="goals">
+				<div class="thegoal">
+					<h2 class="goal__head">Create</h2>
+					<Create />
+				</div>
+				<div class="thegoal">
+					<h2 class="goal__head">Inspire</h2>
+					<Inspire />
+				</div>
+				<div class="thegoal">
+					<h2 class="goal__head">Educate</h2>
+					<Educate />
+				</div>
+				<div class="thegoal">
+					<h2 class="goal__head">Earn</h2>
+					<Earn />
+				</div>
+			</div>
 			<div class="team">
 				<div class="team__wrapper">
 					<h1 class="team__head">Meet The Team</h1>
@@ -121,11 +139,21 @@
 
 <script setup>
 	import MemberItem from "@/components/items/MemberItem.vue";
+	import Create from "@/assets/icons/Create.vue";
 
 	import { useTeamStore } from "@/stores/team.js";
+	import Educate from "@/assets/icons/Educate.vue";
+	import Earn from "@/assets/icons/Earn.vue";
+	import Inspire from "@/assets/icons/Inspire.vue";
 
 	const teamStore = useTeamStore();
+
+	function deeets(name, age) {
+		console.log(`I am ${name} and I\'m ${age} years old`);
+	}
+	deeets("Leroy", 8);
 </script>
+4
 
 <style scoped>
 	.header {
@@ -169,15 +197,15 @@
 	/* mis-vis */
 
 	.mis-vis {
-		/* margin: 0 1.5rem; */
 		display: grid;
-		gap: 1rem;
+		gap: 2rem;
 		background-color: var(--almostGrey);
+		margin: 1.5rem;
 	}
 
 	.mis,
 	.vis {
-		padding: 1rem;
+		padding: 1.5rem;
 		box-shadow: 0 2px 8px rgb(0 0 0 / 0.3);
 		background-color: var(--colorWhite);
 		transition: all 0.3s ease-in-out;
@@ -214,7 +242,32 @@
 		gap: 2em;
 	}
 
-	.history {
+	.history,
+	.culture {
+		display: grid;
+		gap: 2rem;
+	}
+
+	.text__head {
+		text-transform: uppercase;
+		color: var(--color02);
+		padding: 1rem 0;
+		text-align: center;
+	}
+
+	.text__desc {
+		text-align: center;
+	}
+
+	/* Goals */
+
+	.goals {
+		display: grid;
+		gap: 1.5rem;
+	}
+
+	.thegoal {
+		background-color: grey;
 	}
 
 	/* Team */
@@ -277,10 +330,10 @@
 			padding: 4rem;
 		}
 
-		.text__head {
-			text-transform: uppercase;
-			color: var(--color02);
-			padding: 1rem 0;
+		/* Goals */
+
+		.goals {
+			grid-template-columns: repeat(4, 1fr);
 		}
 
 		/* Team*/
