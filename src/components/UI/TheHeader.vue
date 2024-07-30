@@ -1,7 +1,11 @@
 <template>
 	<header>
 		<nav>
-			<h1 class="logo">Kijivu</h1>
+			<h1>
+				<RouterLink :to="{ name: 'home' }" class="logo"
+					>Kijivu</RouterLink
+				>
+			</h1>
 			<ul class="navlinks" :class="{ active: state.isActive }">
 				<li>
 					<RouterLink
@@ -84,7 +88,8 @@
 	.burger {
 		/* position: relative; */
 		cursor: pointer;
-		z-index: 1;
+		z-index: 999999;
+		transition: all 0.3s ease-in-out;
 	}
 
 	.bar {
@@ -93,6 +98,7 @@
 		height: 2px;
 		background-color: black;
 		margin: 5px 0;
+		transition: all 0.3s ease-in-out;
 	}
 
 	.navlinks li {
@@ -109,7 +115,7 @@
 
 	.navlinks {
 		position: fixed;
-		inset: 15% 5% 30% 5%;
+		inset: 10% 5% 30% 5%;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -117,14 +123,14 @@
 		gap: 1.5em;
 		padding: min(30vh, 10rem) 2em;
 		background-color: #fff;
-		/* height: 250px; */
+		height: 250px;
 		transform: translateY(-150%);
 		transition: transform 350ms ease-out;
 		z-index: 9999;
 	}
 
-	.navlinks.active {
-		transform: translateY(0%);
+	.burger.active {
+		transform: rotate(-180deg) translateX(8px) translateY(10px);
 	}
 
 	.burger.active .bar:nth-child(2) {
@@ -137,6 +143,10 @@
 
 	.burger.active .bar:nth-child(3) {
 		transform: rotate(-45deg) translateY(-10px);
+	}
+
+	.navlinks.active {
+		transform: translateY(0%);
 	}
 
 	@media (min-width: 50em) {

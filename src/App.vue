@@ -43,4 +43,8 @@
 	img {
 		width: 100%;
 	}
+
+	a {
+		text-decoration: none;
+	}
 </style>

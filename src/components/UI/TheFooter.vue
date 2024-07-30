@@ -13,11 +13,17 @@
 					</div>
 					<div class="box">
 						<Phone />
-						<span class="text">+254719572537</span>
+						<a
+							class="text"
+							href="https://wa.me/254719572537?text=Hello%20Kijivu"
+							>+254719572537</a
+						>
 					</div>
 					<div class="box">
 						<Email />
-						<span class="text">Kijivumedia@gmail.com</span>
+						<a href="mailto:kijivumedia@gmail.com" class="text"
+							>Kijivumedia@gmail.com</a
+						>
 					</div>
 				</div>
 				<div class="second">
@@ -119,7 +125,8 @@
 		color: #f4f4f4;
 	}
 
-	.second a:hover {
+	.second a:hover,
+	.text:hover {
 		text-decoration: underline;
 		color: var(--color01);
 	}
