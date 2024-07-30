@@ -100,22 +100,42 @@
 					<img src="../assets/img/our-culture.webp" alt="" />
 				</div>
 			</div>
-			<div class="goals">
-				<div class="thegoal">
-					<h2 class="goal__head">Create</h2>
-					<Create />
-				</div>
-				<div class="thegoal">
-					<h2 class="goal__head">Inspire</h2>
-					<Inspire />
-				</div>
-				<div class="thegoal">
-					<h2 class="goal__head">Educate</h2>
-					<Educate />
-				</div>
-				<div class="thegoal">
-					<h2 class="goal__head">Earn</h2>
-					<Earn />
+			<div class="values">
+				<h1 class="values__head">Our 3 Core values</h1>
+				<div class="values__wrapper">
+					<div class="value">
+						<h3 class="value__head">
+							We take responsibilty for ourselves
+						</h3>
+						<p class="value__desc">
+							At Kijivu, we believe that being responsible means
+							taking care of our actions and making good choices.
+							Just like how superheroes take care of their city,
+							we want everyone to be a hero in their own life and
+							help their community.
+						</p>
+					</div>
+					<div class="value">
+						<h3 class="value__head">We show compassion</h3>
+						<p class="value__desc">
+							Compassion is about being kind and understanding how
+							others feel. At Kijivu, we create stories and videos
+							that show how important it is to be nice and help
+							each other. It's like sharing your toys or giving a
+							hug when someone is sad—it makes the world a better
+							place.
+						</p>
+					</div>
+					<div class="value">
+						<h3 class="value__head">We Nurture curiosity</h3>
+						<p class="value__desc">
+							Curiosity is like being a little detective who loves
+							to learn new things. We make fun videos and stories
+							that make you want to ask questions and explore.
+							It's like going on a treasure hunt where every clue
+							leads to something amazing to learn.
+						</p>
+					</div>
 				</div>
 			</div>
 			<div class="team">
@@ -155,7 +175,7 @@
 </script>
 4
 
-<style scoped>
+<style lang="css" scoped>
 	.header {
 		min-height: 50vh;
 		display: flex;
@@ -268,6 +288,36 @@
 
 	.thegoal {
 		background-color: grey;
+	}
+
+	/* values */
+
+	.values {
+		margin: 1.5rem;
+	}
+
+	.values__head {
+		text-align: center;
+		padding: 1rem 0;
+	}
+
+	.value__head {
+		color: var(--color02);
+	}
+
+	.values__wrapper {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: 1.5rem;
+	}
+
+	.value {
+		padding: 1.5rem;
+		border: 1px solid var(--colorWhite);
+	}
+
+	.value:hover {
+		border: 1px solid var(--color02);
 	}
 
 	/* Team */
