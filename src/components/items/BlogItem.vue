@@ -2,19 +2,17 @@
 	<div class="blog">
 		<img :src="image" alt="" />
 		<div class="blog__details">
-			<div class="even">
-				<Calender />
-				<span class="event__date">{{ date }}</span>
-			</div>
 			<h3 class="event__title">{{ title }}</h3>
+			<p class="blog__desc">
+				{{ description }}
+			</p>
+			<RouterLink to="/">Read More</RouterLink>
 		</div>
 	</div>
 </template>
 
 <script setup>
-	import Calender from "@/assets/icons/Calender.vue";
-
-	const props = defineProps(["id", "image", "title", "date"]);
+	const props = defineProps(["id", "image", "title", "description"]);
 </script>
 
 <style lang="css" scoped>

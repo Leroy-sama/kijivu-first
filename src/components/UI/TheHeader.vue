@@ -123,7 +123,7 @@
 		gap: 1.5em;
 		padding: min(30vh, 10rem) 2em;
 		background-color: #fff;
-		height: 250px;
+		/* height: 250px; */
 		transform: translateY(-150%);
 		transition: transform 350ms ease-out;
 		z-index: 9999;
