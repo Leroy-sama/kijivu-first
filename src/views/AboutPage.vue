@@ -3,101 +3,72 @@
 		<section class="header">
 			<div class="header__wrapper">
 				<h1 class="header__head">About Kijivu</h1>
+				<p class="header__text">
+					We unleash vulnerable Children & Youth with Education,
+					Training and Life Skills to co-create a
+				</p>
 			</div>
 		</section>
 		<div class="wrapper">
 			<div class="story">
 				<div class="story__wrapper">
-					<h1 class="story__head">Our Story</h1>
+					<h1 class="story__head">Welcome to better me</h1>
 					<p class="story__text">
-						We harness the power of storytelling among the youth to
-						spark conversations and inspire action on critical
-						issues like climate change. Join us in creating a
-						brighter future through nurturing impactful narratives
-					</p>
-					<p class="story__text">
-						Lorem ipsum dolor sit amet consectetur adipisicing elit.
-						Ex et voluptatibus excepturi consequuntur quisquam
-						ipsam, maiores enim mollitia. Doloremque, autem
-						expedita. Error quas debitis a, nam mollitia vel odit
-						saepe!
+						The following pages will immerse you into what we are
+						doing and why we are doing it. Before continuing, you’re
+						invited to take a deep breath in 🙂
 					</p>
 				</div>
 			</div>
 			<div class="mis-vis">
 				<div class="mis">
-					<h2 class="mis__head">Our Mision</h2>
+					<h2 class="mis__head">Our Guiding Principle</h2>
 					<p class="mis__text">
-						To empower and engage a million youth to address
-						critical social issues, foster community resilience, and
-						promote creative expression.
+						A better world starts with a better me
 					</p>
 				</div>
 				<div class="vis">
-					<h2 class="vis__head">Our Vision</h2>
-					<p class="vis__text">
-						To stand as a leading community based organization
-						championing understanding and igniting positive societal
-						change art.
-					</p>
-				</div>
-			</div>
-			<div class="images">
-				<div class="images__wrapper">
-					<div class="image">
-						<img src="../assets/img/DSC_0837.jpg" alt="" />
-					</div>
-					<div class="image">
-						<img
-							src="https://www.memaafrica.com/assets/img/slide/slide-2.jpg"
-							alt=""
-						/>
-					</div>
-					<div class="image">
-						<img
-							src="https://www.memaafrica.com/assets/img/slide/mkt.jpg"
-							alt=""
-						/>
-					</div>
-					<div class="image">
-						<img
-							src="https://i.pinimg.com/564x/64/10/04/6410044ef51dbd7322a0b69378fbaeb0.jpg"
-							alt=""
-						/>
-					</div>
+					<h2 class="vis__head">Why do we exist</h2>
+					<p class="vis__text">To unleash more joy</p>
 				</div>
 			</div>
 			<div class="awas">
 				<div class="history">
 					<div class="history__text">
-						<h2 class="text__head">Our History</h2>
+						<h2 class="text__head">Our Vision</h2>
 						<p class="text__desc">
-							Founded in 1981 in Lausanne, Switzerland, and
-							quickly expanding to Silicon Valley, Logitech
-							started connecting people through innovative
-							computer peripherals and many industry firsts,
-							including the infrared cordless mouse, the
-							thumb-operated trackball, the laser mouse, and more.
-							We honor bold innovation and our founders, Pierluigi
-							Zappacosta, Giacomo Marini and Daniel Borel,
-							Chairman Emeritus.
+							A joyful world of self-responsible, compassionate
+							and curious human beings who play together to
+							strengthen life in all forms.
+						</p>
+						<p class="text__desc2">
+							We boldly believe in a new era, where peace on earth
+							is possible and where we all live in harmony with
+							nature and each other. We see a joyful world where
+							nutritious food is abundant for everyone, where our
+							children can swim in any river and open their mouths
+							to drink clean water and where all our differences
+							are celebrated. We see a Better World and we know
+							that it starts with ourselves.
 						</p>
 					</div>
-					<img src="../assets/img/our-history.webp" alt="" />
 				</div>
 				<div class="culture">
 					<div class="culture__text">
-						<h2 class="text__head">Our Culture</h2>
+						<h2 class="text__head">Our Mission</h2>
 						<p class="text__desc">
-							Everyone at Kijivu works together like a big family,
-							helping each other and sharing ideas. We believe in
-							being responsible, showing compassion, and always
-							staying curious. Just like how we make our fun and
-							meaningful projects, we also make sure to have fun
-							and learn new things every day.
+							To unleash the inner power within 1 million Children
+							& Youth with Education, Training and Life Skills to
+							bring about positive change for themselves and their
+							communities.
+						</p>
+						<p class="text__desc2">
+							We see Kenya’s new generation as facilitators of
+							positive change and it is our mission to support
+							them in reaching their potential – to co-create a
+							Better World for all.
 						</p>
 					</div>
-					<img src="../assets/img/our-culture.webp" alt="" />
 				</div>
 			</div>
 			<div class="values">
@@ -167,11 +138,6 @@
 	import Inspire from "@/assets/icons/Inspire.vue";
 
 	const teamStore = useTeamStore();
-
-	function deeets(name, age) {
-		console.log(`I am ${name} and I\'m ${age} years old`);
-	}
-	deeets("Leroy", 8);
 </script>
 4
 
@@ -187,151 +153,15 @@
 		background-position: top;
 	}
 
+	.header__wrapper {
+		background-color: rgb(119, 0, 119);
+	}
+
 	.header__head {
 		font-size: 4rem;
 		font-family: "Playfair Display", serif;
 		color: var(--color02Darker);
 		text-align: center;
-	}
-
-	/* Story */
-
-	.story__wrapper,
-	.images__wrapper,
-	.team__wrapper {
-		margin: 0 2em;
-		padding: 2em 0;
-	}
-
-	.story__head {
-		color: var(--color02);
-	}
-
-	.story__head,
-	.story__text,
-	.team__head {
-		padding: 0.5em 0;
-		text-align: center;
-	}
-
-	/* mis-vis */
-
-	.mis-vis {
-		display: grid;
-		gap: 2rem;
-		background-color: var(--almostGrey);
-		margin: 1.5rem;
-	}
-
-	.mis,
-	.vis {
-		padding: 1.5rem;
-		box-shadow: 0 2px 8px rgb(0 0 0 / 0.3);
-		background-color: var(--colorWhite);
-		transition: all 0.3s ease-in-out;
-	}
-
-	.mis__head,
-	.vis__head {
-		color: var(--color02);
-		transition: all 0.3s ease-in-out;
-		text-align: center;
-	}
-
-	.mis:hover,
-	.vis:hover {
-		background-color: var(--color02);
-		color: var(--colorWhite);
-	}
-
-	.mis:hover .mis__head,
-	.vis:hover .vis__head {
-		color: var(--colorWhite);
-	}
-
-	/* History and Culture */
-
-	.awas {
-		margin: 0 1.5rem;
-	}
-
-	/* Images */
-
-	.images__wrapper {
-		display: grid;
-		gap: 2em;
-	}
-
-	.history,
-	.culture {
-		display: grid;
-		gap: 2rem;
-	}
-
-	.text__head {
-		text-transform: uppercase;
-		color: var(--color02);
-		padding: 1rem 0;
-		text-align: center;
-	}
-
-	.text__desc {
-		text-align: center;
-	}
-
-	/* Goals */
-
-	.goals {
-		display: grid;
-		gap: 1.5rem;
-	}
-
-	.thegoal {
-		background-color: grey;
-	}
-
-	/* values */
-
-	.values {
-		margin: 1.5rem;
-	}
-
-	.values__head {
-		text-align: center;
-		padding: 1rem 0;
-	}
-
-	.value__head {
-		color: var(--color02);
-	}
-
-	.values__wrapper {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-		gap: 1.5rem;
-	}
-
-	.value {
-		padding: 1.5rem;
-		border: 1px solid var(--colorWhite);
-	}
-
-	.value:hover {
-		border: 1px solid var(--color02);
-	}
-
-	/* Team */
-
-	.team__wrapper {
-		margin: 0 1.5rem;
-	}
-
-	.members {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		gap: 2em;
 	}
 
 	@media (min-width: 50em) {

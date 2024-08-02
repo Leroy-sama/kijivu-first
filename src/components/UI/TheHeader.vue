@@ -7,25 +7,68 @@
 				>
 			</h1>
 			<ul class="navlinks" :class="{ active: state.isActive }">
-				<li>
-					<RouterLink
-						:to="{ name: 'home' }"
-						@click.native="closeNavMenu"
-						>Home</RouterLink
-					>
-				</li>
-				<li>
+				<li class="aboutlink">
 					<RouterLink
 						:to="{ name: 'about' }"
 						@click.native="closeNavMenu"
-						>About</RouterLink
+						>About Us</RouterLink
 					>
+					<div class="children">
+						<div class="child">
+							<h3 class="child__head">About us</h3>
+							<p class="child__text">
+								Our vision, mission, values and culture
+							</p>
+						</div>
+						<div class="child">
+							<h3 class="child__head">Our Work</h3>
+							<p class="child__text">
+								Where we work and what we do
+							</p>
+						</div>
+						<div class="child">
+							<h3 class="child__head">Our Team</h3>
+							<p class="child__text">
+								Meet our board, team and office
+							</p>
+						</div>
+						<div class="child">
+							<h3 class="child__head">Get Involved</h3>
+							<p class="child__text">
+								Volunteer, intern or sponsor a child
+							</p>
+						</div>
+						<div class="child">
+							<h3 class="child__head">Our Story</h3>
+							<p class="child__text">
+								This is all it started back in 2000
+							</p>
+						</div>
+						<div class="child">
+							<h3 class="child__head">Annual Reports</h3>
+							<p class="child__text">
+								Get a transparent view into all our works
+							</p>
+						</div>
+						<div class="child">
+							<h3 class="child__head">Our Updates</h3>
+							<p class="child__text">
+								Enjoy some updates from Kenya
+							</p>
+						</div>
+						<div class="child">
+							<h3 class="child__head">Our Online Shop</h3>
+							<p class="child__text">
+								Better me swag just for you
+							</p>
+						</div>
+					</div>
 				</li>
 				<li>
 					<RouterLink
 						:to="{ name: 'services' }"
 						@click.native="closeNavMenu"
-						>Services</RouterLink
+						>Our Pillars</RouterLink
 					>
 				</li>
 				<li>
@@ -40,6 +83,22 @@
 						:to="{ name: 'contact' }"
 						@click.native="closeNavMenu"
 						>Contact</RouterLink
+					>
+				</li>
+				<li>
+					<RouterLink
+						class="donate-btn"
+						:to="{ name: 'contact' }"
+						@click.native="closeNavMenu"
+						>Donate</RouterLink
+					>
+				</li>
+				<li>
+					<RouterLink
+						class="involve-btn"
+						:to="{ name: 'contact' }"
+						@click.native="closeNavMenu"
+						>Get Involved</RouterLink
 					>
 				</li>
 			</ul>
@@ -74,6 +133,10 @@
 </script>
 
 <style scoped>
+	.children {
+		display: none;
+	}
+
 	nav {
 		display: flex;
 		justify-content: space-between;
@@ -150,6 +213,11 @@
 	}
 
 	@media (min-width: 50em) {
+		nav {
+			justify-content: flex-start;
+			gap: 4rem;
+		}
+
 		.navlinks {
 			position: static;
 			flex-direction: row;
@@ -159,6 +227,38 @@
 
 		.burger {
 			display: none;
+		}
+
+		li .donate-btn {
+			background-color: var(--primaryColor);
+			padding: 0.6rem 1rem;
+			color: var(--colorWhite);
+		}
+
+		li .involve-btn {
+			background-color: var(--secondaryColor);
+			padding: 0.6rem 1rem;
+			color: var(--colorWhite);
+		}
+
+		.aboutlink {
+			position: relative;
+		}
+
+		.children {
+			position: absolute;
+			left: -7rem;
+			border: 1px solid var(--color02);
+			width: 50vw;
+			display: grid;
+			grid-template-columns: repeat(4, 1fr);
+			padding: 1rem;
+			background-color: var(--colorWhite);
+			display: none;
+		}
+
+		.child {
+			padding: 1rem;
 		}
 	}
 </style>
