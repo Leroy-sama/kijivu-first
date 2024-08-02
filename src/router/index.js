@@ -11,6 +11,10 @@ const routes = [
 		},
 	},
 	{
+		path: "/home",
+		redirect: { name: "home" },
+	},
+	{
 		path: "/about",
 		name: "about",
 		component: () => import("../views/AboutPage.vue"),

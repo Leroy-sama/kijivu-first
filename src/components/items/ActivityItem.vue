@@ -12,7 +12,7 @@
 </template>
 
 <script setup>
-	const props = defineProps(["id", "image", "title", "description"]);
+	const props = defineProps(["id", "title", "image", "description"]);
 </script>
 
 <style lang="css" scoped>

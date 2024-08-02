@@ -35,9 +35,11 @@
 		--colorSpanBg: #ffecb2;
 
 		/* ----- version 02 ----- */
-		--primaryColor: #f0b503;
+		--primaryColor: #fcb900;
 		--primaryColorDarker: #af8300;
-		--secondaryColor: #dcdbd5;
+		--secondaryColor: #9b51e0;
+		--lighterBluish: #abb8c3;
+		--cyanBlue: #0693e3;
 	}
 
 	img {
