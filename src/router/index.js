@@ -23,6 +23,14 @@ const routes = [
 		},
 	},
 	{
+		path: "/ourwork",
+		name: "ourwork",
+		component: () => import("../views/OurWork.vue"),
+		meta: {
+			title: "Our Work",
+		},
+	},
+	{
 		path: "/about/:id",
 		name: "member-details",
 		props: true,
