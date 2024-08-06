@@ -5,7 +5,7 @@
 				<h1 class="header__head">About Kijivu</h1>
 				<p class="header__text">
 					We unleash vulnerable Children & Youth with Education,
-					Training and Life Skills to co-create a
+					Training and Life Skills to co-create a Better Week
 				</p>
 			</div>
 		</section>
@@ -22,12 +22,14 @@
 			</div>
 			<div class="mis-vis">
 				<div class="mis">
+					<Compass />
 					<h2 class="mis__head">Our Guiding Principle</h2>
 					<p class="mis__text">
 						A better world starts with a better me
 					</p>
 				</div>
 				<div class="vis">
+					<Question />
 					<h2 class="vis__head">Why do we exist</h2>
 					<p class="vis__text">To unleash more joy</p>
 				</div>
@@ -35,6 +37,7 @@
 			<div class="awas">
 				<div class="history">
 					<div class="history__text">
+						<GlobeAfrica />
 						<h2 class="text__head">Our Vision</h2>
 						<p class="text__desc">
 							A joyful world of self-responsible, compassionate
@@ -55,6 +58,7 @@
 				</div>
 				<div class="culture">
 					<div class="culture__text">
+						<Mission />
 						<h2 class="text__head">Our Mission</h2>
 						<p class="text__desc">
 							To unleash the inner power within 1 million Children
@@ -109,33 +113,34 @@
 					</div>
 				</div>
 			</div>
-			<div class="team">
-				<div class="team__wrapper">
-					<h1 class="team__head">Meet The Team</h1>
-					<div class="members">
-						<div v-for="member in teamStore.team" :key="member.id">
-							<MemberItem
-								:id="member.id"
-								:memberImage="member.memberImage"
-								:memberName="member.memberName"
-								:memberTitle="member.memberTitle"
-							/>
-						</div>
-					</div>
-				</div>
+			<div class="culture2">
+				<Culture />
+				<h1 class="culture__head">Our Culture</h1>
+				<p class="culture__desc">
+					Our culture is to lead and inspire by example. We live our
+					values. “By their works you shall know them.” This is no
+					easy task. We acknowledge that being a Better Me is constant
+					work in progress and we support each other to grow.
+				</p>
+			</div>
+			<div class="home">
+				<Home />
+				<h1 class="home__head">Welcome Home</h1>
+				<p class="home__text">Your better me family</p>
 			</div>
 		</div>
 	</main>
 </template>
 
 <script setup>
+	import Compass from "@/assets/icons/Compass.vue";
+	import Culture from "@/assets/icons/Culture.vue";
+	import GlobeAfrica from "@/assets/icons/GlobeAfrica.vue";
+	import Home from "@/assets/icons/Home.vue";
+	import Mission from "@/assets/icons/Mission.vue";
+	import Question from "@/assets/icons/Question.vue";
 	import MemberItem from "@/components/items/MemberItem.vue";
-	import Create from "@/assets/icons/Create.vue";
-
 	import { useTeamStore } from "@/stores/team.js";
-	import Educate from "@/assets/icons/Educate.vue";
-	import Earn from "@/assets/icons/Earn.vue";
-	import Inspire from "@/assets/icons/Inspire.vue";
 
 	const teamStore = useTeamStore();
 </script>
@@ -146,7 +151,7 @@
 		min-height: 50vh;
 		display: flex;
 		justify-content: center;
-		align-items: center;
+		align-items: end;
 		background: url(../assets/img/boss-s-day-arrangement-with-paper-boats-copy-space.jpg);
 		background-repeat: no-repeat;
 		background-size: cover;
@@ -154,79 +159,64 @@
 	}
 
 	.header__wrapper {
-		background-color: rgb(119, 0, 119);
+		border-image: linear-gradient(
+				rgba(119, 0, 119, 0.5),
+				rgba(119, 0, 119, 0.5)
+			)
+			fill 1;
+		margin: 0 1.5rem;
+		padding: 1.5rem;
 	}
 
 	.header__head {
 		font-size: 4rem;
 		font-family: "Playfair Display", serif;
-		color: var(--color02Darker);
+		color: var(--colorWhite);
 		text-align: center;
 	}
 
-	@media (min-width: 50em) {
+	.wrapper {
+		display: grid;
+		gap: 4rem;
+	}
+
+	.story__wrapper,
+	.mis,
+	.vis,
+	.history__text,
+	.culture__text,
+	.culture2,
+	.home,
+	.values {
+		text-align: center;
+		box-shadow: 0 2px 8px var(--color04);
+		margin: 1.5rem;
+		padding: 1.5rem;
+	}
+
+	.story__wrapper {
+		margin-top: 0;
+	}
+
+	.values__head {
+		text-align: center;
+	}
+
+	.mis-vis {
+		display: grid;
+		gap: 4rem;
+	}
+
+	@media (min-width: 48em) {
 		/* Story */
 
 		.wrapper {
 			max-width: 1200px;
-			margin: 3rem auto;
+			margin: 0 auto 3rem;
 		}
 
-		.mis-vis {
-			grid-template-columns: 1fr 1fr;
-		}
-
-		/* Images */
-
-		.images__wrapper {
-			grid-template-columns: 1fr 1fr;
-			gap: 2em;
-		}
-
-		/* History and Culture */
-
-		.history {
-			display: flex;
-			align-items: center;
-			/* gap: 2rem; */
-		}
-
-		.culture {
-			display: flex;
-			flex-direction: row-reverse;
-			align-items: center;
-			/* gap: 2rem; */
-		}
-
-		.history img,
-		.culture img {
-			max-width: 575px;
-			aspect-ratio: 1 / 1;
-			object-fit: cover;
-		}
-
-		.history__text,
-		.culture__text {
-			padding: 4rem;
-		}
-
-		/* Goals */
-
-		.goals {
-			grid-template-columns: repeat(4, 1fr);
-		}
-
-		/* Team*/
-
-		.team__wrapper {
-			max-width: 1200px;
-			margin: 0 auto;
-		}
-
-		.members {
-			display: grid;
-			grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-			gap: 2rem;
+		.header__wrapper {
+			padding: 3rem;
 		}
 	}
 </style>
