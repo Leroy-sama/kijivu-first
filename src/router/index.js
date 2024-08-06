@@ -31,6 +31,22 @@ const routes = [
 		},
 	},
 	{
+		path: "/getinvolved",
+		name: "getinvolved",
+		component: () => import("../views/GetInvolved.vue"),
+		meta: {
+			title: "Get Involved",
+		},
+	},
+	{
+		path: "/annual-reports",
+		name: "annual-reports",
+		component: () => import("../views/AnnualReports.vue"),
+		meta: {
+			title: "Annual Reports",
+		},
+	},
+	{
 		path: "/about/:id",
 		name: "member-details",
 		props: true,
