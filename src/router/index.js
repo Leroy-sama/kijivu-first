@@ -23,19 +23,35 @@ const routes = [
 		},
 	},
 	{
-		path: "/ourwork",
-		name: "ourwork",
+		path: "/our-work",
+		name: "our-work",
 		component: () => import("../views/OurWork.vue"),
 		meta: {
 			title: "Our Work",
 		},
 	},
 	{
-		path: "/getinvolved",
-		name: "getinvolved",
+		path: "/our-team",
+		name: "our-team",
+		component: () => import("../views/OurTeam.vue"),
+		meta: {
+			title: "Our Team",
+		},
+	},
+	{
+		path: "/get-involved",
+		name: "get-involved",
 		component: () => import("../views/GetInvolved.vue"),
 		meta: {
 			title: "Get Involved",
+		},
+	},
+	{
+		path: "/founders-story",
+		name: "founders-story",
+		component: () => import("../views/OurStory.vue"),
+		meta: {
+			title: "Our Story",
 		},
 	},
 	{
@@ -87,6 +103,13 @@ const routes = [
 		component: () => import("../views/ContactPage.vue"),
 		meta: {
 			title: "Contact",
+		},
+	},
+	{
+		path: "/:catchAll(.*)",
+		component: () => import("../views/NotFound.vue"),
+		meta: {
+			title: "Not Found",
 		},
 	},
 ];

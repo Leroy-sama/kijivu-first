@@ -35,12 +35,18 @@
 					</p>
 				</div>
 				<div class="founder1__imagesi">
-					<img src="" alt="" />
+					<img
+						src="https://betterme.org/wp-content/uploads/2016/07/IMG_5553-002.jpg"
+						alt=""
+					/>
 				</div>
 			</div>
 			<div class="founder2">
 				<div class="founder2__imagesi">
-					<img src="" alt="" />
+					<img
+						src="https://betterme.org/wp-content/uploads/2016/07/943884_996007820472259_951337592168124622_nsq.jpg"
+						alt=""
+					/>
 				</div>
 				<div class="founder2__textsi">
 					<h2 class="founder2__head">Toto</h2>
@@ -86,3 +92,31 @@
 		</div>
 	</main>
 </template>
+
+<style lang="css" scoped>
+	header {
+		min-height: 50vh;
+		display: flex;
+		justify-content: center;
+		align-items: end;
+		background: url(https://i.pinimg.com/564x/45/c3/93/45c393054a436d99d4d632120474fc8c.jpg);
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+	}
+
+	.header__wrapper {
+		padding: 1rem;
+		border-image: linear-gradient(
+				rgba(22, 21, 116, 0.6),
+				rgba(107, 3, 3, 0.8)
+			)
+			fill 1;
+		max-width: 1200px;
+	}
+
+	.founders {
+		box-shadow: 0 2px 8px rgba(0 0 0 / 0.5);
+		margin: 0 1.5rem;
+	}
+</style>

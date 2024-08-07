@@ -155,7 +155,6 @@
 					<img src="../assets/img/third-img.jpg" alt="" />
 				</div>
 				<div class="fourth">
-					09./
 					<h1 class="fourth__head">Volunteers are our backbone</h1>
 					<p class="fourth__desc">
 						Our work provides a space for volunteers from around the
@@ -173,3 +172,39 @@
 		</section>
 	</main>
 </template>
+
+<style lang="css" scoped>
+	header {
+		min-height: 50vh;
+		display: flex;
+		justify-content: center;
+		align-items: end;
+		background: url(https://i.pinimg.com/564x/45/c3/93/45c393054a436d99d4d632120474fc8c.jpg);
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+	}
+
+	.header__wrapper {
+		padding: 3rem;
+		border-image: linear-gradient(
+				rgba(22, 21, 116, 0.6),
+				rgba(107, 3, 3, 0.8)
+			)
+			fill 1;
+		max-width: 1200px;
+	}
+
+	.empower__wrapper,
+	.pillar,
+	.location__desc,
+	.first,
+	.fourth {
+		margin: 0 1.5rem;
+		box-shadow: 0 2px 8px rgba(0 0 0 / 0.5);
+	}
+
+	.location__image {
+		margin: 0 1.5rem;
+	}
+</style>

@@ -49,4 +49,8 @@
 	a {
 		text-decoration: none;
 	}
+
+	li {
+		list-style: none;
+	}
 </style>

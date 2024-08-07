@@ -40,3 +40,34 @@
 		</section>
 	</main>
 </template>
+
+<style lang="css" scoped>
+	header {
+		min-height: 50vh;
+		display: flex;
+		justify-content: center;
+		align-items: end;
+		background: url(https://i.pinimg.com/564x/96/ad/55/96ad55ce91f4f98a4da06f974570fe57.jpg);
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+	}
+
+	.header__wrapper {
+		padding: 3rem;
+		border-image: linear-gradient(
+				rgba(22, 21, 116, 0.6),
+				rgba(107, 3, 3, 0.8)
+			)
+			fill 1;
+	}
+
+	.header__head {
+		color: #fff;
+	}
+
+	.involved__wrapper {
+		box-shadow: 0 2px 8px rgba(0 0 0 / 0.5);
+		margin: 0 1.5rem;
+	}
+</style>
