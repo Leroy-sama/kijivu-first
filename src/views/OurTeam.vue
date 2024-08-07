@@ -156,13 +156,79 @@
 						<p>Office contact: thomas@betterme.org</p>
 					</div>
 				</div>
-				<div class="loaction__image">
-					<img src="" alt="" />
+				<div class="location__image">
+					<img
+						src="https://betterme.org/wp-content/uploads/2016/08/staticmap-1024x1024.png"
+						alt=""
+					/>
 				</div>
 				<div class="closing__image">
-					<img src="" alt="" />
+					<img
+						class="img-last"
+						src="https://betterme.org/wp-content/uploads/2023/09/Our-Kisumu-Office1.png"
+						alt=""
+					/>
 				</div>
 			</div>
 		</div>
 	</main>
 </template>
+
+<style lang="css" scoped>
+	img {
+		border-radius: 50%;
+	}
+
+	.board {
+		margin: 0 1.5rem;
+	}
+
+	.board__head {
+		text-align: center;
+		color: var(--primaryColor);
+		font-size: 2.5rem;
+		padding: 1.5rem 0;
+	}
+
+	.board__members {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		gap: 2rem;
+	}
+
+	.board__member {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 1rem;
+	}
+
+	.member__name {
+		color: var(--primaryColor);
+	}
+
+	.location {
+		background-color: var(--thirdColor);
+		color: var(--almostGrey);
+	}
+
+	.text__head {
+		color: var(--primaryColor);
+		text-align: center;
+		font-size: 2.5rem;
+	}
+
+	.location__text,
+	.location__image,
+	.closing__image {
+		margin: 0 1.5rem;
+	}
+
+	.text__desc {
+		text-align: center;
+	}
+
+	.img-last {
+		border-radius: 0;
+	}
+</style>

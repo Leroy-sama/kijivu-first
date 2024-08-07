@@ -32,8 +32,13 @@
 						<RouterLink to="/">Intern in Kenya</RouterLink>
 					</div>
 					<div class="involved__stats">
-						<span class="stat1"> 150+ volunteers in Kenya </span>
-						<span class="stat2"> 10k+ children & youth </span>
+						<span class="stat1">
+							150+
+							<span class="yellow1">volunteers in Kenya</span>
+						</span>
+						<span class="stat2">
+							<span class="yellow">10k+</span> children & youth
+						</span>
 					</div>
 				</div>
 			</div>
@@ -69,5 +74,39 @@
 	.involved__wrapper {
 		box-shadow: 0 2px 8px rgba(0 0 0 / 0.5);
 		margin: 0 1.5rem;
+		padding: 1.5rem;
+	}
+
+	.involved__head {
+		font-style: italic;
+		color: var(--primaryColor);
+		font-size: 2.5rem;
+		text-align: center;
+		line-height: 1;
+	}
+
+	.stat1 {
+		color: var(--thirdColor);
+		font-size: 4rem;
+		font-weight: 700;
+	}
+
+	.yellow1 {
+		color: var(--primaryColor);
+		font-size: 1rem;
+		text-transform: uppercase;
+		display: block;
+	}
+
+	.stat2 {
+		font-weight: 700;
+		color: var(--thirdColor);
+		text-transform: uppercase;
+	}
+
+	.yellow {
+		font-size: 4rem;
+		color: var(--primaryColor);
+		display: block;
 	}
 </style>

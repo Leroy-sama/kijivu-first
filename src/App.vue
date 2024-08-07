@@ -1,6 +1,6 @@
 <script setup>
-	import TheHeader from "./components/UI/TheHeader.vue";
-	import TheFooter from "./components/UI/TheFooter.vue";
+	import TheHeader from "./components/layout/TheHeader.vue";
+	import TheFooter from "./components/layout/TheFooter.vue";
 </script>
 
 <template>
@@ -38,6 +38,7 @@
 		--primaryColor: #fcb900;
 		--primaryColorDarker: #af8300;
 		--secondaryColor: #9b51e0;
+		--thirdColor: #4a4577;
 		--lighterBluish: #abb8c3;
 		--cyanBlue: #0693e3;
 	}

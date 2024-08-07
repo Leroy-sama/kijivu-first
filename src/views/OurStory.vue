@@ -87,9 +87,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="block-img">
-			<img src="" alt="" />
-		</div>
+		<div class="block-img"></div>
 	</main>
 </template>
 
@@ -118,5 +116,30 @@
 	.founders {
 		box-shadow: 0 2px 8px rgba(0 0 0 / 0.5);
 		margin: 0 1.5rem;
+		padding: 1.5rem;
+	}
+
+	.founder1__head,
+	.founder2__head {
+		font-size: 1.5rem;
+		color: var(--primaryColor);
+	}
+
+	.founder1__title,
+	.founder2__title {
+		color: var(--primaryColor);
+	}
+
+	.founder1 img,
+	.founder2 img {
+		border-radius: 50%;
+	}
+
+	.block-img {
+		height: 50vh;
+		background: url(https://i.pinimg.com/564x/d3/c7/8c/d3c78cb64b9ed0d849c89deffdf3e6ab.jpg);
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
 	}
 </style>

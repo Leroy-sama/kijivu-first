@@ -8,7 +8,8 @@
 		<section class="empower">
 			<div class="empower__wrapper">
 				<h1 class="empower__head">
-					Youth Empowerment for the vulnerable
+					Youth <span class="emp">Empowerment</span> for the
+					vulnerable
 				</h1>
 				<h3 class="empower__small-head">
 					We fulfill our Mission through our 3 Pillars Approach
@@ -21,8 +22,8 @@
 					through our 3 Pillars.
 				</p>
 				<p class="empower__cta">
-					Read our About us page to learn more about our mission and
-					vision.
+					Read our <RouterLink to="/about">About us</RouterLink> page
+					to learn more about our mission and vision.
 				</p>
 			</div>
 		</section>
@@ -135,7 +136,9 @@
 		<section class="volunteer">
 			<div class="gridbox">
 				<div class="first">
-					<h1 class="first__head">Help to help oneself and others</h1>
+					<h1 class="first__head">
+						Help to help <span class="emp">oneself and others</span>
+					</h1>
 					<p class="first__desc">
 						One of our greatest passions is to support young people
 						to find and unleash the inner power that each of us
@@ -155,7 +158,9 @@
 					<img src="../assets/img/third-img.jpg" alt="" />
 				</div>
 				<div class="fourth">
-					<h1 class="fourth__head">Volunteers are our backbone</h1>
+					<h1 class="fourth__head">
+						<span class="white">Volunteers</span> are our backbone
+					</h1>
 					<p class="fourth__desc">
 						Our work provides a space for volunteers from around the
 						globe to share their skills and talents as tools for
@@ -186,13 +191,12 @@
 	}
 
 	.header__wrapper {
-		padding: 3rem;
 		border-image: linear-gradient(
-				rgba(22, 21, 116, 0.6),
-				rgba(107, 3, 3, 0.8)
+				rgba(119, 0, 119, 0.5),
+				rgba(119, 0, 119, 0.5)
 			)
 			fill 1;
-		max-width: 1200px;
+		padding: 1.5rem;
 	}
 
 	.empower__wrapper,
@@ -202,9 +206,55 @@
 	.fourth {
 		margin: 0 1.5rem;
 		box-shadow: 0 2px 8px rgba(0 0 0 / 0.5);
+		padding: 1.5rem;
 	}
 
 	.location__image {
 		margin: 0 1.5rem;
+	}
+
+	/* empower */
+
+	.empower__head,
+	.pillar__head,
+	.location__head,
+	.first__head {
+		color: var(--thirdColor);
+		font-size: 2rem;
+	}
+
+	.pillar__text {
+		color: var(--thirdColor);
+	}
+
+	.emp {
+		color: var(--primaryColor);
+	}
+
+	.empower__small-head,
+	.pillar__num,
+	.location__locale {
+		color: var(--primaryColor);
+	}
+
+	.pillar__num {
+		text-transform: uppercase;
+	}
+
+	.fourth {
+		background-color: var(--thirdColor);
+	}
+
+	.fourth__head {
+		color: var(--primaryColor);
+	}
+
+	.white {
+		color: var(--colorWhite);
+	}
+
+	.fourth__desc,
+	.fourth__cta {
+		color: var(--almostGrey);
 	}
 </style>

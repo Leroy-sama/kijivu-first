@@ -76,5 +76,25 @@
 	.reports__wrapper {
 		box-shadow: 0 2px 8px rgba(0 0 0 / 0.5);
 		margin: 0 1.5rem;
+		padding: 1.5rem;
+	}
+
+	.reports__head {
+		color: var(--primaryColor);
+	}
+
+	.reports-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		gap: 2rem;
+	}
+
+	.report {
+		border: 6px solid var(--primaryColor);
+	}
+
+	.report__text {
+		text-align: center;
+		padding: 1rem;
 	}
 </style>

@@ -2,10 +2,13 @@
 	<main>
 		<section class="header">
 			<div class="header__wrapper">
-				<h1 class="header__head">About Kijivu</h1>
 				<p class="header__text">
-					We unleash vulnerable Children & Youth with Education,
-					Training and Life Skills to co-create a Better Week
+					We <i>unleash</i> vulnerable
+					<strong>Children & Youth</strong> with
+					<span class="yellow"
+						>Education, Training and Life Skills</span
+					>
+					to co-create a <span class="big">Better World</span>
 				</p>
 			</div>
 		</section>
@@ -30,7 +33,7 @@
 				</div>
 				<div class="vis">
 					<Question />
-					<h2 class="vis__head">Why do we exist</h2>
+					<h2 class="vis__head">Why we exist</h2>
 					<p class="vis__text">To unleash more joy</p>
 				</div>
 			</div>
@@ -126,7 +129,7 @@
 			<div class="home">
 				<Home />
 				<h1 class="home__head">Welcome Home</h1>
-				<p class="home__text">Your better me family</p>
+				<p class="home__text">-Your better me family</p>
 			</div>
 		</div>
 	</main>
@@ -155,7 +158,7 @@
 		background: url(../assets/img/boss-s-day-arrangement-with-paper-boats-copy-space.jpg);
 		background-repeat: no-repeat;
 		background-size: cover;
-		background-position: top;
+		background-position: center;
 	}
 
 	.header__wrapper {
@@ -168,11 +171,20 @@
 		padding: 1.5rem;
 	}
 
-	.header__head {
-		font-size: 4rem;
-		font-family: "Playfair Display", serif;
+	.header__text {
 		color: var(--colorWhite);
+		font-size: 1.5rem;
 		text-align: center;
+	}
+
+	.yellow {
+		color: var(--primaryColor);
+	}
+
+	.big {
+		display: block;
+		font-size: 2rem;
+		font-weight: 700;
 	}
 
 	.wrapper {
@@ -205,6 +217,34 @@
 	.mis-vis {
 		display: grid;
 		gap: 4rem;
+	}
+
+	/* story */
+
+	.story__head,
+	.mis__head,
+	.vis__head,
+	.text__head,
+	.values__head,
+	.culture__head,
+	.home__head {
+		color: var(--primaryColor);
+	}
+
+	.story__text,
+	.mis__text,
+	.vis__text,
+	.text__desc,
+	.value__head,
+	.culture__desc,
+	.home__text {
+		color: var(--thirdColor);
+		padding: 1.5rem 0;
+	}
+
+	.mis__text,
+	.vis__text {
+		font-weight: 700;
 	}
 
 	@media (min-width: 48em) {
