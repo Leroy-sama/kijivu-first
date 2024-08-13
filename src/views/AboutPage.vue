@@ -251,12 +251,27 @@
 		/* Story */
 
 		.wrapper {
-			max-width: 1200px;
+			max-width: 1100px;
 			margin: 0 auto 3rem;
 		}
 
 		.header__wrapper {
 			padding: 3rem;
+			max-width: 1050px;
+			margin: 0 auto;
+		}
+
+		.story__text {
+			font-weight: 700;
+			padding: 2rem 3rem;
+		}
+
+		.mis__head {
+			font-size: 3rem;
+		}
+
+		.mis__text {
+			font-size: 2.5rem;
 		}
 	}
 </style>

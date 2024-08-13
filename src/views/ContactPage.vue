@@ -1,12 +1,12 @@
 <template>
 	<main>
-		<section class="contact">
-			<div class="header"></div>
+		<Teleport to="body">
+			<div class="backdrop"></div>
 			<div class="contact__wrapper">
 				<div class="contact-text">
-					<h1 class="text-head">Let us know how we can help you</h1>
+					<h1 class="text-head">Get In Touch</h1>
 					<p class="text-desc">
-						Contact us today at
+						Email us directly via
 						<span class="email">Kijivumedia@gmail.com</span> or by
 						using the form below and a member of our team will be in
 						touch.
@@ -43,21 +43,7 @@
 								Please enter a valid email
 							</p>
 						</div>
-						<div
-							class="form__control"
-							:class="{ invalid: !number.isValid }"
-						>
-							<input
-								type="tel"
-								id="telephone"
-								placeholder="Phone Number"
-								v-model="number.val"
-								@blur="clearValidity(number)"
-							/>
-							<p class="err-msg" v-if="!number.isValid">
-								Number cannot be empty
-							</p>
-						</div>
+
 						<div
 							class="form__control"
 							:class="{ invalid: !message.isValid }"
@@ -77,26 +63,9 @@
 							<button class="sbt__btn">Send Messsage</button>
 						</div>
 					</form>
-					<div class="addresses">
-						<div class="address">
-							<SecLoc color="#00937e" width="48" height="48" />
-							<h3>Our Address</h3>
-							<p>Quality Plaza, Kisumu City</p>
-						</div>
-						<div class="address">
-							<Email color="#00937e" width="48" height="48" />
-							<h3>Email Us</h3>
-							<p>Kijivumedia@gmail.com</p>
-						</div>
-						<div class="address">
-							<Phone color="#00937e" width="48" height="48" />
-							<h3>Call Us</h3>
-							<p>+254719572537</p>
-						</div>
-					</div>
 				</div>
 			</div>
-		</section>
+		</Teleport>
 	</main>
 </template>
 
@@ -180,25 +149,34 @@
 		} else {
 			console.error("Form validation failed");
 		}
-
-		// console.log(formData);
 	};
 </script>
 
-<style scoped>
-	.header {
-		background: url(@/assets/img/contact-img.jpg);
-		min-height: 50vh;
-		background-position: center;
-		background-size: cover;
-		background-repeat: no-repeat;
-		display: flex;
-		justify-content: center;
-		align-items: center;
+<style lang="css" scoped>
+	.backdrop {
+		position: fixed;
+		top: 0;
+		left: 0;
+		min-height: 120vh;
+		width: 100%;
+		background-color: rgba(0, 0, 0, 0.75);
+		z-index: 10;
 	}
 
 	.contact__wrapper {
 		margin: 0 1.5rem;
+		position: fixed;
+		top: 0;
+		left: 10%;
+		width: 80%;
+		z-index: 100;
+		border-radius: 12px;
+		border: none;
+		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+		padding: 0;
+		margin: 0;
+		/* overflow: hidden; */
+		background-color: white;
 	}
 
 	.contact-text {
@@ -220,7 +198,9 @@
 	}
 
 	.form-contacts {
-		display: grid;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 		gap: 3rem;
 	}
 
@@ -275,10 +255,6 @@
 		.contact__wrapper {
 			max-width: 1200px;
 			margin: 4rem auto;
-		}
-
-		.form-contacts {
-			grid-template-columns: 1fr 1fr;
 		}
 	}
 </style>

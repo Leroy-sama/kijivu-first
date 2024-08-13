@@ -11,8 +11,8 @@
 						empowerment, and promoting creative expression.
 					</p>
 					<div class="hero__cta-box">
-						<RouterLink to="/about" class="hero__cta"
-							>Get Involved</RouterLink
+						<BaseButton to="/about" link class="hero__cta"
+							>Get Involved</BaseButton
 						>
 					</div>
 				</div>
@@ -116,7 +116,7 @@
 							<input type="text" placeholder="Name" />
 							<input type="email" placeholder="Email" />
 						</div>
-						<button class="btn">Sign Up</button>
+						<BaseButton class="btn">Sign Up</BaseButton>
 					</form>
 				</div>
 			</div>
@@ -168,20 +168,10 @@
 				<p class="quote__owner">- Torsten Kremser, Cheerman</p>
 			</div>
 		</article>
-		<section class="partners">
-			<div class="partners__wrapp">
-				<h1 class="partners__head">Our Partners & Sponsors</h1>
-				<div class="icons">
-					<UN />
-					<Amazon />
-					<Google />
-				</div>
-			</div>
-		</section>
-		<div class="float">
-			<h1 class="float__head">Give today and change lives</h1>
-			<RouterLink to="/">Donate Now</RouterLink>
+		<div class="base">
+			<BasePartners />
 		</div>
+		<BaseHang />
 	</main>
 </template>
 
@@ -204,6 +194,9 @@
 	import Bullet from "@/assets/icons/Bullet.vue";
 	import StoryItem from "@/components/items/StoryItem.vue";
 	import ActivityItem from "@/components/items/ActivityItem.vue";
+	import BaseButton from "@/components/UI/BaseButton.vue";
+	import BaseHang from "@/components/UI/BaseHang.vue";
+	import BasePartners from "@/components/UI/BasePartners.vue";
 
 	const eventStore = useEventStore();
 	const updatesStore = useUpdatesStore();
@@ -385,21 +378,21 @@
 
 	/* PARTNERS SECTION */
 
-	.partners__head {
-		font-size: 1.5rem;
-		color: var(--color02Darker);
-		text-align: center;
-	}
-
-	.icons {
-		display: flex;
-		justify-content: center;
-		gap: 2rem;
-		padding: 2rem 0;
-	}
-
 	.float {
 		box-shadow: 0 2px 8px rgb(0 0 0 / 0.3);
+	}
+
+	.swiper-button-prev svg,
+	.swiper-button-next svg {
+		background-color: #333; /* Change the background color */
+		color: white; /* Change the arrow color */
+		width: 40px; /* Adjust the width */
+		height: 40px; /* Adjust the height */
+		border-radius: 50%; /* Make them circular */
+		box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* Add a shadow */
+		display: flex;
+		align-items: center;
+		justify-content: center;
 	}
 
 	@media (min-width: 700px) {

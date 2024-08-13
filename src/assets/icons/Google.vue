@@ -6,8 +6,8 @@
 <template>
 	<svg
 		xmlns="http://www.w3.org/2000/svg"
-		width="56.89"
-		height="48"
+		width="112"
+		height="96"
 		viewBox="0 0 256 216"
 	>
 		<path

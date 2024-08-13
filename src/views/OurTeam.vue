@@ -1,3 +1,7 @@
+<script setup lang="ts">
+	import BaseHelp from "@/components/UI/BaseHelp.vue";
+</script>
+
 <template>
 	<main class="team">
 		<div class="wrapper">
@@ -169,6 +173,7 @@
 						alt=""
 					/>
 				</div>
+				<BaseHelp />
 			</div>
 		</div>
 	</main>
