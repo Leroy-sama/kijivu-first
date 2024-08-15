@@ -19,8 +19,16 @@
 					primary and high-school education.
 				</p>
 				<div class="stats">
-					<span class="stat1">302 children in primary school</span>
-					<span class="stat2">136 children in high school</span>
+					<span class="stat1"
+						><span class="purple">302</span> children in primary
+						school</span
+					>
+					<span class="stat2"
+						>136
+						<span class="purple"
+							>children in high school</span
+						></span
+					>
 				</div>
 				<p class="education__text3">
 					Together with our partners, we unleash 302 children with
@@ -32,3 +40,47 @@
 		</section>
 	</main>
 </template>
+
+<style lang="css" scoped>
+	header {
+		min-height: 50vh;
+		display: flex;
+		justify-content: center;
+		align-items: end;
+		background: url(@/assets/img/boss-s-day-arrangement-with-paper-boats-copy-space.jpg);
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+	}
+
+	.header__wrapper {
+		border-image: linear-gradient(
+				rgba(119, 0, 119, 0.5),
+				rgba(119, 0, 119, 0.5)
+			)
+			fill 1;
+		margin: 0 1.5rem;
+		padding: 1.5rem;
+	}
+
+	.education__wrapper {
+		margin: 0 1.5rem;
+		display: grid;
+		gap: 1.5rem;
+	}
+
+	.stats {
+		display: grid;
+		gap: 2rem;
+	}
+
+	.stat1,
+	.stat2 {
+		color: var(--primaryColor);
+	}
+
+	.purple {
+		color: var(--thirdColor);
+		display: block;
+	}
+</style>

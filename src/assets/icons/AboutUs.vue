@@ -1,6 +1,6 @@
 <script>
 	export default {
-		name: "IcOutlineFoundation",
+		name: "MdiAboutCircleOutline",
 	};
 </script>
 <template>
@@ -12,7 +12,7 @@
 	>
 		<path
 			fill="var(--primaryColor)"
-			d="M19 12h3L12 3L2 12h3v3H3v2h2v3h2v-3h4v3h2v-3h4v3h2v-3h2v-2h-2zM7 15v-4.81l4-3.6V15zm6 0V6.59l4 3.6V15z"
+			d="M11 9h2V7h-2m1 13c-4.41 0-8-3.59-8-8s3.59-8 8-8s8 3.59 8 8s-3.59 8-8 8m0-18A10 10 0 0 0 2 12a10 10 0 0 0 10 10a10 10 0 0 0 10-10A10 10 0 0 0 12 2m-1 15h2v-6h-2z"
 		/>
 	</svg>
 </template>

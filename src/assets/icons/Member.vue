@@ -6,11 +6,11 @@
 <template>
 	<svg
 		xmlns="http://www.w3.org/2000/svg"
-		width="4em"
-		height="4em"
+		width="48"
+		height="48"
 		viewBox="0 0 24 24"
 	>
-		<g fill="none" stroke="#00937e" stroke-width="2">
+		<g fill="none" stroke="var(--primaryColor)" stroke-width="2">
 			<path
 				stroke-linecap="round"
 				stroke-linejoin="round"

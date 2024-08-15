@@ -63,6 +63,30 @@ const routes = [
 		},
 	},
 	{
+		path: "/education",
+		name: "education",
+		component: () => import("../components/pillars/EducationPillar.vue"),
+		meta: {
+			title: "Education",
+		},
+	},
+	{
+		path: "/training",
+		name: "training",
+		component: () => import("../components/pillars/TrainingPillar.vue"),
+		meta: {
+			title: "Training",
+		},
+	},
+	{
+		path: "/life-skills",
+		name: "life-skills",
+		component: () => import("../components/pillars/TrainingPillar.vue"),
+		meta: {
+			title: "Life Skills",
+		},
+	},
+	{
 		path: "/about/:id",
 		name: "member-details",
 		props: true,

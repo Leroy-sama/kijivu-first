@@ -1,6 +1,6 @@
 <script>
 	export default {
-		name: "IcOutlineFoundation",
+		name: "RivetIconsShoppingBagSolid",
 	};
 </script>
 <template>
@@ -8,11 +8,11 @@
 		xmlns="http://www.w3.org/2000/svg"
 		width="48"
 		height="48"
-		viewBox="0 0 24 24"
+		viewBox="0 0 16 16"
 	>
 		<path
 			fill="var(--primaryColor)"
-			d="M19 12h3L12 3L2 12h3v3H3v2h2v3h2v-3h4v3h2v-3h4v3h2v-3h2v-2h-2zM7 15v-4.81l4-3.6V15zm6 0V6.59l4 3.6V15z"
+			d="M4 4a4 4 0 1 1 8 0h4v12H0V4zm4-2a2 2 0 0 0-2 2h4a2 2 0 0 0-2-2M4 6v2h2V6zm6 0v2h2V6z"
 		/>
 	</svg>
 </template>

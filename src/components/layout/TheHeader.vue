@@ -14,62 +14,106 @@
 						>About Us</RouterLink
 					>
 					<div class="children">
-						<div class="child">
+						<RouterLink to="/about" class="child">
+							<AboutUs />
 							<h3 class="child__head">About us</h3>
 							<p class="child__text">
 								Our vision, mission, values and culture
 							</p>
-						</div>
-						<div class="child">
+						</RouterLink>
+						<RouterLink to="/our-work" class="child">
+							<Pillars />
 							<h3 class="child__head">Our Work</h3>
 							<p class="child__text">
 								Where we work and what we do
 							</p>
-						</div>
-						<div class="child">
+						</RouterLink>
+						<RouterLink to="/our-team" class="child">
+							<Member />
 							<h3 class="child__head">Our Team</h3>
 							<p class="child__text">
 								Meet our board, team and office
 							</p>
-						</div>
-						<div class="child">
+						</RouterLink>
+						<RouterLink to="get-involved" class="child">
+							<Inspire />
 							<h3 class="child__head">Get Involved</h3>
 							<p class="child__text">
 								Volunteer, intern or sponsor a child
 							</p>
-						</div>
-						<div class="child">
+						</RouterLink>
+						<RouterLink to="/founders-story" class="child">
+							<Story />
 							<h3 class="child__head">Our Story</h3>
 							<p class="child__text">
 								This is all it started back in 2000
 							</p>
-						</div>
-						<div class="child">
+						</RouterLink>
+						<RouterLink to="/annual-reports" class="child">
+							<Report />
 							<h3 class="child__head">Annual Reports</h3>
 							<p class="child__text">
 								Get a transparent view into all our works
 							</p>
-						</div>
-						<div class="child">
+						</RouterLink>
+						<RouterLink to="/" class="child">
+							<Updates />
 							<h3 class="child__head">Our Updates</h3>
 							<p class="child__text">
 								Enjoy some updates from Kenya
 							</p>
-						</div>
-						<div class="child">
+						</RouterLink>
+						<RouterLink to="/" class="child">
+							<Shop />
 							<h3 class="child__head">Our Online Shop</h3>
 							<p class="child__text">
 								Better me swag just for you
 							</p>
-						</div>
+						</RouterLink>
 					</div>
 				</li>
-				<li>
-					<RouterLink
-						:to="{ name: 'services' }"
-						@click.native="closeNavMenu"
+				<li class="pillarslink">
+					<RouterLink to="#" @click.native="closeNavMenu"
 						>Our Pillars</RouterLink
 					>
+					<div class="pillarss">
+						<h2 class="pillarss__head">Our 3 Pillars</h2>
+						<div class="pillars__wrap">
+							<RouterLink to="/education" class="pillar">
+								<img
+									src="https://betterme.org/wp-content/uploads/2023/09/345435421_107564359004251_4760653564313001008_n2.jpg"
+									alt=""
+								/>
+								<h3 class="pillar__head">Education</h3>
+								<p class="pillar__desc">
+									We provide access to primary and higher
+									education
+								</p>
+							</RouterLink>
+							<RouterLink to="/training" class="pillar">
+								<img
+									src="https://betterme.org/wp-content/uploads/2023/09/318335777_432290479118773_1485537484939576546_n22.jpg"
+									alt=""
+								/>
+								<h3 class="pillar__head">Training</h3>
+								<p class="pillar__desc">
+									We provide practical and vocational skills
+									training
+								</p>
+							</RouterLink>
+							<RouterLink to="/life-skills" class="pillar">
+								<img
+									src="https://betterme.org/wp-content/uploads/2023/09/69a63371-7d5a-4d1d-9fe2-33215db9c65c-1-1080x7202-1.jpg"
+									alt=""
+								/>
+								<h3 class="pillar__head">Life skills</h3>
+								<p class="pillar__desc">
+									We provide mental and spiritual life skill
+									programs
+								</p>
+							</RouterLink>
+						</div>
+					</div>
 				</li>
 				<li>
 					<RouterLink
@@ -116,6 +160,14 @@
 </template>
 
 <script setup>
+	import AboutUs from "@/assets/icons/AboutUs.vue";
+	import Inspire from "@/assets/icons/Inspire.vue";
+	import Member from "@/assets/icons/Member.vue";
+	import Pillars from "@/assets/icons/Pillars.vue";
+	import Report from "@/assets/icons/Report.vue";
+	import Shop from "@/assets/icons/Shop.vue";
+	import Story from "@/assets/icons/Story.vue";
+	import Updates from "@/assets/icons/Updates.vue";
 	import { reactive } from "vue";
 	import { RouterLink } from "vue-router";
 
@@ -132,8 +184,9 @@
 	};
 </script>
 
-<style scoped>
-	.children {
+<style lang="css" scoped>
+	.children,
+	.pillarss {
 		display: none;
 	}
 
@@ -241,15 +294,16 @@
 			color: var(--colorWhite);
 		}
 
-		.aboutlink {
+		.aboutlink,
+		.pillarslink {
 			position: relative;
 		}
 
 		.children {
 			position: absolute;
-			left: -7rem;
+			top: 2rem;
 			border: 1px solid var(--color02);
-			width: 50vw;
+			width: 800px;
 			display: grid;
 			grid-template-columns: repeat(4, 1fr);
 			padding: 1rem;
@@ -257,8 +311,47 @@
 			display: none;
 		}
 
+		.aboutlink:hover .children {
+			display: grid;
+		}
+
 		.child {
 			padding: 1rem;
+			display: grid;
+			gap: 0.7rem;
+			justify-items: center;
+			transition: all 0.3s ease-in-out;
+		}
+
+		.child:hover {
+			background-color: #ffe190;
+		}
+
+		.child__text {
+			text-align: center;
+		}
+
+		.pillarss {
+			position: absolute;
+			top: 3rem;
+			background-color: var(--colorWhite);
+			padding: 1.5rem;
+			width: 700px;
+			display: none;
+		}
+
+		.pillarslink:hover .pillarss {
+			display: block;
+		}
+
+		.pillarss__head {
+			text-align: center;
+			padding: 1rem;
+		}
+
+		.pillars__wrap {
+			display: flex;
+			gap: 1.5rem;
 		}
 	}
 </style>
