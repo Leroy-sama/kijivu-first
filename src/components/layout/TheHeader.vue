@@ -333,11 +333,12 @@
 
 		.pillarss {
 			position: absolute;
-			top: 3rem;
+			top: 2rem;
 			background-color: var(--colorWhite);
 			padding: 1.5rem;
 			width: 700px;
 			display: none;
+			border: 1px solid var(--color02);
 		}
 
 		.pillarslink:hover .pillarss {
@@ -352,6 +353,10 @@
 		.pillars__wrap {
 			display: flex;
 			gap: 1.5rem;
+		}
+
+		.pillar {
+			padding: 1rem;
 		}
 	}
 </style>

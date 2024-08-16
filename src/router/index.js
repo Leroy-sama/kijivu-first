@@ -81,7 +81,7 @@ const routes = [
 	{
 		path: "/life-skills",
 		name: "life-skills",
-		component: () => import("../components/pillars/TrainingPillar.vue"),
+		component: () => import("../components/pillars/LifeskillsPillar.vue"),
 		meta: {
 			title: "Life Skills",
 		},

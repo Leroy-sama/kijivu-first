@@ -19,16 +19,14 @@
 					primary and high-school education.
 				</p>
 				<div class="stats">
-					<span class="stat1"
-						><span class="purple">302</span> children in primary
-						school</span
-					>
-					<span class="stat2"
-						>136
-						<span class="purple"
-							>children in high school</span
-						></span
-					>
+					<span class="stat1">
+						<span class="purple1">302</span>
+						<p>children in primary school</p>
+					</span>
+					<span class="stat2">
+						<span class="yellow1">136</span>
+						<p>children in high school</p>
+					</span>
 				</div>
 				<p class="education__text3">
 					Together with our partners, we unleash 302 children with
@@ -71,16 +69,45 @@
 
 	.stats {
 		display: grid;
+		justify-items: center;
 		gap: 2rem;
 	}
 
 	.stat1,
 	.stat2 {
-		color: var(--primaryColor);
+		display: grid;
+		justify-items: center;
 	}
 
-	.purple {
+	.stat1 .purple1 {
 		color: var(--thirdColor);
-		display: block;
+		font-size: 3rem;
+		font-weight: 700;
+	}
+
+	.stat1 p {
+		color: var(--primaryColor);
+		font-size: 1.5rem;
+		text-transform: uppercase;
+		text-align: center;
+	}
+
+	.stat2 .yellow1 {
+		color: var(--primaryColor);
+		font-size: 3rem;
+		font-weight: 700;
+	}
+
+	.stat2 p {
+		color: var(--thirdColor);
+		font-size: 1.5rem;
+		text-transform: uppercase;
+		text-align: center;
+	}
+
+	@media (min-width: 700px) {
+		.stats {
+			grid-template-columns: 1fr 1fr;
+		}
 	}
 </style>

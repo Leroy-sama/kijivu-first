@@ -19,10 +19,86 @@
 					self-discipline, building good relationships and much more.
 				</p>
 				<div class="stats">
-					<span class="stat1">10k+ children & youth reached</span>
-					<span class="stat2">40+ partners & platforms</span>
+					<span class="stat1">
+						<span>10k+</span>
+						<p>children & youth reached</p>
+					</span>
+					<span class="stat2">
+						<span>40+</span>
+						<p>partners & platforms</p>
+					</span>
 				</div>
 			</div>
 		</section>
 	</main>
 </template>
+
+<style lang="css" scoped>
+	header {
+		min-height: 50vh;
+		display: flex;
+		justify-content: center;
+		align-items: end;
+		background: url(https://i.pinimg.com/564x/3f/4b/0a/3f4b0aab8d461af4d7580eb0da80dca2.jpg);
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+	}
+
+	.header__wrapper {
+		border-image: linear-gradient(
+				rgba(119, 0, 119, 0.5),
+				rgba(119, 0, 119, 0.5)
+			)
+			fill 1;
+		margin: 0 1.5rem;
+		padding: 1.5rem;
+	}
+
+	.section__wrapper {
+		margin: 0 1.5rem;
+	}
+
+	.stats,
+	.stat1,
+	.stat2 {
+		display: grid;
+		justify-items: center;
+	}
+
+	.stat1 span {
+		color: var(--thirdColor);
+	}
+
+	.stat2 span {
+		color: var(--primaryColor);
+	}
+
+	.stat1 span,
+	.stat2 span {
+		font-size: 3rem;
+		font-weight: 700;
+	}
+
+	.stat1 p {
+		color: var(--primaryColor);
+	}
+
+	.stat2 p {
+		color: var(--thirdColor);
+	}
+
+	.stat1 p,
+	.stat2 p {
+		font-size: 2rem;
+		text-transform: uppercase;
+		font-weight: 500;
+		text-align: center;
+	}
+
+	@media (min-width: 700px) {
+		.stats {
+			grid-template-columns: 1fr 1fr;
+		}
+	}
+</style>
