@@ -4,15 +4,21 @@
 		<div class="blog__details">
 			<h3 class="event__title">{{ title }}</h3>
 			<p class="blog__desc">
-				{{ description }}
+				{{ smallDesc }}
 			</p>
-			<RouterLink to="/">Read More</RouterLink>
+			<BaseButton mode="flat" link :to="home">Read More</BaseButton>
 		</div>
 	</div>
 </template>
 
 <script setup>
-	const props = defineProps(["id", "title", "image", "description"]);
+	import { computed } from "vue";
+	import BaseButton from "../UI/BaseButton.vue";
+	const props = defineProps(["id", "title", "image", "smallDesc"]);
+
+	const home = computed(() => {
+		return "/";
+	});
 </script>
 
 <style lang="css" scoped>
@@ -40,7 +46,7 @@
 	.event__title {
 		font-size: 1.5rem;
 		padding: 0.5em 0;
-		color: var(--color02);
+		color: var(--thirdColor);
 	}
 
 	@media (min-width: 700px) {

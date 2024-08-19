@@ -6,7 +6,7 @@
 	<div class="hanging">
 		<h1 class="yellow__head">Give Today</h1>
 		<p class="purple__head">and change lives</p>
-		<BaseButton>Donate Now</BaseButton>
+		<BaseButton mode="flat">Donate Now</BaseButton>
 	</div>
 </template>
 

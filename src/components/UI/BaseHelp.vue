@@ -1,7 +1,7 @@
 <template>
 	<div class="help">
 		<h1 class="help__head">Keen to Help?</h1>
-		<BaseButton>Get Involved</BaseButton>
+		<BaseButton mode="flat">Get Involved</BaseButton>
 	</div>
 </template>
 

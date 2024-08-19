@@ -6,13 +6,21 @@
 			<p class="blog__desc">
 				{{ description }}
 			</p>
-			<RouterLink to="/">Read More</RouterLink>
+			<BaseButton mode="flat" link :to="home">Read More</BaseButton>
 		</div>
 	</div>
 </template>
 
 <script setup>
+	import { computed } from "vue";
+
+	import BaseButton from "../UI/BaseButton.vue";
+
 	const props = defineProps(["id", "image", "title", "description"]);
+
+	const home = computed(() => {
+		return "/";
+	});
 </script>
 
 <style lang="css" scoped>
@@ -40,7 +48,7 @@
 	.event__title {
 		font-size: 1.5rem;
 		padding: 0.5em 0;
-		color: var(--color02);
+		color: var(--thirdColor);
 	}
 
 	@media (min-width: 700px) {

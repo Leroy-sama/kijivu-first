@@ -93,31 +93,35 @@
 							pagination="true"
 						>
 							<swiper-slide
-								v-for="activity in activityStore.activities"
+								v-for="activity in differenceStore.diffs"
 								:key="activity.id"
 							>
 								<ActivityItem
 									:image="activity.image"
 									:title="activity.title"
-									:description="activity.description"
+									:smallDesc="activity.smallDesc"
 								/>
 							</swiper-slide>
 						</swiper-container>
 					</div>
 				</div>
 				<div class="signup">
-					<h2 class="signup__head">Good News & Updates</h2>
-					<p class="signup__text">
-						Sign up and receive heart-filled updates from the ground
-						in Kenya! 🙂
-					</p>
-					<form>
-						<div class="form-group">
-							<input type="text" placeholder="Name" />
-							<input type="email" placeholder="Email" />
-						</div>
-						<BaseButton class="btn">Sign Up</BaseButton>
-					</form>
+					<div class="signup__wrap">
+						<h2 class="signup__head">Good News & Updates</h2>
+						<p class="signup__text">
+							Sign up and receive heart-filled updates from the
+							ground in Kenya! 🙂
+						</p>
+						<form>
+							<div class="form-group">
+								<input type="text" placeholder="Name" />
+								<input type="email" placeholder="Email" />
+							</div>
+							<BaseButton style="width: 100%" mode="flat"
+								>Sign Up</BaseButton
+							>
+						</form>
+					</div>
 				</div>
 			</div>
 		</section>
@@ -140,7 +144,7 @@
 						alt=""
 					/>
 					<img
-						src="https://i.pinimg.com/564x/bb/94/79/bb9479d5c340119a63fec857c0fa92de.jpg"
+						src="https://i.pinimg.com/564x/8d/6c/90/8d6c90f6bc3b86208fc0563f5e79e28f.jpg"
 						alt=""
 					/>
 					<img
@@ -152,7 +156,9 @@
 						alt=""
 					/>
 				</div>
-				<a class="social__btn" href="instagram.com">Go to Instagram</a>
+				<BaseButton mode="flat" ink to="https://www.instagram.com/"
+					>Go to Instagram</BaseButton
+				>
 			</div>
 		</section>
 		<article class="quote">
@@ -180,6 +186,7 @@
 	import { useEventStore } from "@/stores/events";
 	import { useUpdatesStore } from "@/stores/updates";
 	import { useActivityStore } from "@/stores/activity";
+	import { useDifferenceStore } from "@/stores/differences";
 
 	import { register } from "swiper/element/bundle";
 	register();
@@ -200,7 +207,8 @@
 
 	const eventStore = useEventStore();
 	const updatesStore = useUpdatesStore();
-	const activityStore = useActivityStore();
+	// const activityStore = useActivityStore();
+	const differenceStore = useDifferenceStore();
 
 	const limitedEvents = computed(() => eventStore.events.slice(0, 2));
 </script>
@@ -266,7 +274,7 @@
 	.news__head {
 		font-family: "Playfair Display", serif;
 		font-size: 2.5rem;
-		color: var(--color02Darker);
+		color: var(--thirdColor);
 	}
 
 	.updates__head {
@@ -278,22 +286,29 @@
 	.updates__head h2 {
 		font-size: 1.3rem;
 		font-weight: 500;
+		color: var(--primaryColor);
 	}
 
 	/* SIGNUP SECTION */
 
 	.signup {
+		background-color: var(--thirdColor);
+	}
+
+	.signup__wrap {
 		padding: 1rem;
 	}
 
 	.signup__head {
 		font-size: 1.5rem;
-		color: var(--color02Darker);
+		color: var(--colorWhite);
 		text-align: center;
 	}
 
 	.signup__text {
 		text-align: center;
+		padding: 1rem 0;
+		color: var(--almostGrey);
 	}
 
 	form .form-group {
@@ -320,7 +335,7 @@
 	/* SOCIALS SECTION */
 
 	.socials {
-		background-color: var(--color02);
+		background-color: var(--thirdColor);
 	}
 
 	.socials__wrapper {
@@ -406,13 +421,17 @@
 			border-image: none;
 		}
 
+		.hero__wrapper {
+			background-color: var(--thirdColor);
+		}
+
 		.hero__text {
 			text-align: left;
 		}
 
 		.hero__head,
 		.hero__desc {
-			color: var(--color04);
+			color: var(--colorWhite);
 		}
 
 		.hero__img {
@@ -442,16 +461,32 @@
 			padding: 2rem;
 		}
 
-		.updates,
+		/* .updates,
 		.stories,
 		.activities {
 			padding: 1rem;
 			border: 2px solid red;
-		}
+		} */
 
 		.images {
 			display: grid;
 			grid-template-columns: repeat(5, 1fr);
+			gap: 1rem;
+		}
+
+		.signup {
+			/* max-width: 500px; */
+			display: flex;
+			justify-content: center;
+		}
+
+		.signup__wrap {
+			max-width: 600px;
+		}
+
+		form .form-group {
+			width: 100%;
+			flex-direction: row;
 		}
 	}
 
